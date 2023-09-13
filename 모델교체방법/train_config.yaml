@@ -25,7 +25,6 @@ MODEL:
     n_outputs: 5
   convnext_v2: # for convnext_v2 number of outputs is 5 (1, 1+, 1++, 2, 3)
   	n_outputs: 5
-  #needs attention#
   
 DATALOADER:
   batch_size: 16 # 32 possibile

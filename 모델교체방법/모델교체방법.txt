@@ -1,1 +1,1 @@
-models 폴더 안의 convnext_v2.py를 추가하고 이에 맞게 utils.py를 수정한다. 모델 성능 튜닝은 train_config.yaml에서 할 수 있다. 여기에 주어진 파일 그대로 훈련 시키면 훈련에 실패한다. 모델 튜닝을 바꿔봐야 할 것 같다. timm.list_models()를 통해 다양한 다른 모델들을 고려해 볼 수 있다.
+models 폴더 안의 convnext_v2.py를 추가하고 이에 맞게 utils.py를 수정한다. (주어진 파일 참고) 모델 성능 튜닝은 train_config.yaml에서 할 수 있다. 여기에 주어진 파일 그대로 훈련 시키면 훈련에 실패한다. (학습이 진행되지 않는다) 모델 튜닝을 바꿔봐야 할 것 같다. timm.list_models()를 통해 다양한 다른 모델들을 고려해 볼 수 있다.
