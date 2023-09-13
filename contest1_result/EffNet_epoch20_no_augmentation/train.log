@@ -1,0 +1,260 @@
+2023-09-13 10:22:17,215 | train | INFO | Set Logger /content/results/train/20230913_192217
+2023-09-13 10:22:17,239 | train | INFO | Load data, train:8000 val:2000
+2023-09-13 10:22:24,724 | train | INFO | Initiated early stopper, mode: max, best score: inf, patience: 10
+2023-09-13 10:22:24,726 | train | INFO | --Train 0/20
+2023-09-13 10:22:33,394 | train | INFO | batch: 0/500 loss: 1.6023043394088745
+2023-09-13 10:22:56,052 | train | INFO | batch: 100/500 loss: 1.9896070957183838
+2023-09-13 10:23:19,437 | train | INFO | batch: 200/500 loss: 1.1170073747634888
+2023-09-13 10:23:43,311 | train | INFO | batch: 300/500 loss: 1.0903116464614868
+2023-09-13 10:24:07,338 | train | INFO | batch: 400/500 loss: 1.0581833124160767
+2023-09-13 10:24:31,782 | train | INFO | --Val 0/20
+2023-09-13 10:24:31,937 | train | INFO | batch: 0/125 loss: 1.3208404779434204
+2023-09-13 10:24:38,971 | train | INFO | batch: 100/125 loss: 0.9689027070999146
+2023-09-13 10:24:40,858 | train | INFO | Write row 0
+2023-09-13 10:24:41,706 | train | INFO | Early stopper, counter 0/10, best:0.53 -> now:0.53
+2023-09-13 10:24:41,706 | train | INFO | Set counter as 0
+2023-09-13 10:24:41,706 | train | INFO | Update best score as 0.53
+2023-09-13 10:24:42,368 | train | INFO | Recorder, epoch 0 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:24:42,369 | train | INFO | --Train 1/20
+2023-09-13 10:24:42,725 | train | INFO | batch: 0/500 loss: 1.3410736322402954
+2023-09-13 10:25:07,746 | train | INFO | batch: 100/500 loss: 1.0736397504806519
+2023-09-13 10:25:32,316 | train | INFO | batch: 200/500 loss: 0.9556853771209717
+2023-09-13 10:25:56,927 | train | INFO | batch: 300/500 loss: 1.258907437324524
+2023-09-13 10:26:21,706 | train | INFO | batch: 400/500 loss: 0.5259792804718018
+2023-09-13 10:26:46,277 | train | INFO | --Val 1/20
+2023-09-13 10:26:46,499 | train | INFO | batch: 0/125 loss: 1.4816640615463257
+2023-09-13 10:26:53,400 | train | INFO | batch: 100/125 loss: 0.675092339515686
+2023-09-13 10:26:55,044 | train | INFO | Write row 1
+2023-09-13 10:26:55,772 | train | INFO | Early stopper, counter 0/10, best:0.633 -> now:0.633
+2023-09-13 10:26:55,772 | train | INFO | Set counter as 0
+2023-09-13 10:26:55,772 | train | INFO | Update best score as 0.633
+2023-09-13 10:26:56,295 | train | INFO | Recorder, epoch 1 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:26:56,296 | train | INFO | --Train 2/20
+2023-09-13 10:26:56,635 | train | INFO | batch: 0/500 loss: 0.4310673773288727
+2023-09-13 10:27:21,404 | train | INFO | batch: 100/500 loss: 0.8838130235671997
+2023-09-13 10:27:46,201 | train | INFO | batch: 200/500 loss: 0.8706578612327576
+2023-09-13 10:28:10,907 | train | INFO | batch: 300/500 loss: 0.23282025754451752
+2023-09-13 10:28:35,669 | train | INFO | batch: 400/500 loss: 0.47834688425064087
+2023-09-13 10:29:00,384 | train | INFO | --Val 2/20
+2023-09-13 10:29:00,541 | train | INFO | batch: 0/125 loss: 0.8182165026664734
+2023-09-13 10:29:07,456 | train | INFO | batch: 100/125 loss: 0.7257844805717468
+2023-09-13 10:29:09,308 | train | INFO | Write row 2
+2023-09-13 10:29:10,133 | train | INFO | Early stopper, counter 0/10, best:0.711 -> now:0.711
+2023-09-13 10:29:10,133 | train | INFO | Set counter as 0
+2023-09-13 10:29:10,133 | train | INFO | Update best score as 0.711
+2023-09-13 10:29:10,627 | train | INFO | Recorder, epoch 2 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:29:10,628 | train | INFO | --Train 3/20
+2023-09-13 10:29:10,990 | train | INFO | batch: 0/500 loss: 0.16474555432796478
+2023-09-13 10:29:35,730 | train | INFO | batch: 100/500 loss: 0.5908899307250977
+2023-09-13 10:30:00,469 | train | INFO | batch: 200/500 loss: 0.14152932167053223
+2023-09-13 10:30:25,291 | train | INFO | batch: 300/500 loss: 0.07035163044929504
+2023-09-13 10:30:50,043 | train | INFO | batch: 400/500 loss: 0.4342089295387268
+2023-09-13 10:31:14,551 | train | INFO | --Val 3/20
+2023-09-13 10:31:14,727 | train | INFO | batch: 0/125 loss: 1.1161150932312012
+2023-09-13 10:31:21,751 | train | INFO | batch: 100/125 loss: 0.9786246418952942
+2023-09-13 10:31:23,397 | train | INFO | Write row 3
+2023-09-13 10:31:24,133 | train | INFO | Early stopper, counter 0/10, best:0.724 -> now:0.724
+2023-09-13 10:31:24,133 | train | INFO | Set counter as 0
+2023-09-13 10:31:24,133 | train | INFO | Update best score as 0.724
+2023-09-13 10:31:24,664 | train | INFO | Recorder, epoch 3 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:31:24,666 | train | INFO | --Train 4/20
+2023-09-13 10:31:25,001 | train | INFO | batch: 0/500 loss: 0.15570303797721863
+2023-09-13 10:31:49,837 | train | INFO | batch: 100/500 loss: 0.12138782441616058
+2023-09-13 10:32:14,652 | train | INFO | batch: 200/500 loss: 0.07562347501516342
+2023-09-13 10:32:39,379 | train | INFO | batch: 300/500 loss: 0.51039719581604
+2023-09-13 10:33:04,213 | train | INFO | batch: 400/500 loss: 0.030582699924707413
+2023-09-13 10:33:28,869 | train | INFO | --Val 4/20
+2023-09-13 10:33:29,024 | train | INFO | batch: 0/125 loss: 0.9696277379989624
+2023-09-13 10:33:35,792 | train | INFO | batch: 100/125 loss: 0.9168564081192017
+2023-09-13 10:33:37,658 | train | INFO | Write row 4
+2023-09-13 10:33:38,774 | train | INFO | Early stopper, counter 0/10, best:0.747 -> now:0.747
+2023-09-13 10:33:38,774 | train | INFO | Set counter as 0
+2023-09-13 10:33:38,774 | train | INFO | Update best score as 0.747
+2023-09-13 10:33:39,386 | train | INFO | Recorder, epoch 4 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:33:39,387 | train | INFO | --Train 5/20
+2023-09-13 10:33:39,774 | train | INFO | batch: 0/500 loss: 0.1749490648508072
+2023-09-13 10:34:04,451 | train | INFO | batch: 100/500 loss: 0.08751830458641052
+2023-09-13 10:34:29,236 | train | INFO | batch: 200/500 loss: 0.05966418981552124
+2023-09-13 10:34:54,072 | train | INFO | batch: 300/500 loss: 0.028023995459079742
+2023-09-13 10:35:18,945 | train | INFO | batch: 400/500 loss: 0.026961814612150192
+2023-09-13 10:35:43,532 | train | INFO | --Val 5/20
+2023-09-13 10:35:43,749 | train | INFO | batch: 0/125 loss: 0.5483791828155518
+2023-09-13 10:35:50,875 | train | INFO | batch: 100/125 loss: 1.3586214780807495
+2023-09-13 10:35:52,521 | train | INFO | Write row 5
+2023-09-13 10:35:53,252 | train | INFO | Early stopper, counter 0/10, best:0.758 -> now:0.758
+2023-09-13 10:35:53,252 | train | INFO | Set counter as 0
+2023-09-13 10:35:53,252 | train | INFO | Update best score as 0.758
+2023-09-13 10:35:53,783 | train | INFO | Recorder, epoch 5 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:35:53,784 | train | INFO | --Train 6/20
+2023-09-13 10:35:54,117 | train | INFO | batch: 0/500 loss: 0.003705899929627776
+2023-09-13 10:36:18,892 | train | INFO | batch: 100/500 loss: 0.014125755988061428
+2023-09-13 10:36:43,713 | train | INFO | batch: 200/500 loss: 0.10733874142169952
+2023-09-13 10:37:08,416 | train | INFO | batch: 300/500 loss: 0.033213090151548386
+2023-09-13 10:37:33,182 | train | INFO | batch: 400/500 loss: 0.003266577608883381
+2023-09-13 10:37:57,780 | train | INFO | --Val 6/20
+2023-09-13 10:37:57,932 | train | INFO | batch: 0/125 loss: 1.3278205394744873
+2023-09-13 10:38:04,611 | train | INFO | batch: 100/125 loss: 0.7943443059921265
+2023-09-13 10:38:06,464 | train | INFO | Write row 6
+2023-09-13 10:38:07,678 | train | INFO | Early stopper, counter 0/10, best:0.7715 -> now:0.7715
+2023-09-13 10:38:07,678 | train | INFO | Set counter as 0
+2023-09-13 10:38:07,678 | train | INFO | Update best score as 0.7715
+2023-09-13 10:38:08,471 | train | INFO | Recorder, epoch 6 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:38:08,472 | train | INFO | --Train 7/20
+2023-09-13 10:38:08,942 | train | INFO | batch: 0/500 loss: 0.006344378925859928
+2023-09-13 10:38:33,643 | train | INFO | batch: 100/500 loss: 0.26961633563041687
+2023-09-13 10:38:58,523 | train | INFO | batch: 200/500 loss: 0.3090311288833618
+2023-09-13 10:39:23,364 | train | INFO | batch: 300/500 loss: 0.32894375920295715
+2023-09-13 10:39:48,186 | train | INFO | batch: 400/500 loss: 0.17388410866260529
+2023-09-13 10:40:12,678 | train | INFO | --Val 7/20
+2023-09-13 10:40:12,864 | train | INFO | batch: 0/125 loss: 0.6674546599388123
+2023-09-13 10:40:20,088 | train | INFO | batch: 100/125 loss: 1.305639624595642
+2023-09-13 10:40:21,739 | train | INFO | Write row 7
+2023-09-13 10:40:22,526 | train | INFO | Early stopper, counter 0/10, best:0.778 -> now:0.778
+2023-09-13 10:40:22,527 | train | INFO | Set counter as 0
+2023-09-13 10:40:22,527 | train | INFO | Update best score as 0.778
+2023-09-13 10:40:23,045 | train | INFO | Recorder, epoch 7 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:40:23,047 | train | INFO | --Train 8/20
+2023-09-13 10:40:23,394 | train | INFO | batch: 0/500 loss: 0.010382568463683128
+2023-09-13 10:40:48,184 | train | INFO | batch: 100/500 loss: 0.0008052818011492491
+2023-09-13 10:41:12,966 | train | INFO | batch: 200/500 loss: 0.41731277108192444
+2023-09-13 10:41:37,706 | train | INFO | batch: 300/500 loss: 0.12191516160964966
+2023-09-13 10:42:02,577 | train | INFO | batch: 400/500 loss: 0.01980604976415634
+2023-09-13 10:42:27,234 | train | INFO | --Val 8/20
+2023-09-13 10:42:27,386 | train | INFO | batch: 0/125 loss: 1.2271519899368286
+2023-09-13 10:42:34,040 | train | INFO | batch: 100/125 loss: 1.5104833841323853
+2023-09-13 10:42:35,757 | train | INFO | Write row 8
+2023-09-13 10:42:36,945 | train | INFO | Early stopper, counter 1/10, best:0.778 -> now:0.7775
+2023-09-13 10:42:36,946 | train | INFO | --Train 9/20
+2023-09-13 10:42:37,349 | train | INFO | batch: 0/500 loss: 0.003922623116523027
+2023-09-13 10:43:02,103 | train | INFO | batch: 100/500 loss: 0.0024078674614429474
+2023-09-13 10:43:26,969 | train | INFO | batch: 200/500 loss: 0.10337387025356293
+2023-09-13 10:43:51,840 | train | INFO | batch: 300/500 loss: 0.008141347207129002
+2023-09-13 10:44:16,619 | train | INFO | batch: 400/500 loss: 0.011684266850352287
+2023-09-13 10:44:41,231 | train | INFO | --Val 9/20
+2023-09-13 10:44:41,397 | train | INFO | batch: 0/125 loss: 0.7310430407524109
+2023-09-13 10:44:48,637 | train | INFO | batch: 100/125 loss: 0.847117006778717
+2023-09-13 10:44:50,285 | train | INFO | Write row 9
+2023-09-13 10:44:51,082 | train | INFO | Early stopper, counter 0/10, best:0.7805 -> now:0.7805
+2023-09-13 10:44:51,082 | train | INFO | Set counter as 0
+2023-09-13 10:44:51,082 | train | INFO | Update best score as 0.7805
+2023-09-13 10:44:51,574 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:44:51,576 | train | INFO | --Train 10/20
+2023-09-13 10:44:51,922 | train | INFO | batch: 0/500 loss: 0.023523950949311256
+2023-09-13 10:45:16,802 | train | INFO | batch: 100/500 loss: 0.21763116121292114
+2023-09-13 10:45:41,567 | train | INFO | batch: 200/500 loss: 0.006178808864206076
+2023-09-13 10:46:06,488 | train | INFO | batch: 300/500 loss: 0.00017618286074139178
+2023-09-13 10:46:31,414 | train | INFO | batch: 400/500 loss: 0.016262684017419815
+2023-09-13 10:46:56,246 | train | INFO | --Val 10/20
+2023-09-13 10:46:56,422 | train | INFO | batch: 0/125 loss: 0.44978833198547363
+2023-09-13 10:47:03,132 | train | INFO | batch: 100/125 loss: 1.526072382926941
+2023-09-13 10:47:04,793 | train | INFO | Write row 10
+2023-09-13 10:47:05,621 | train | INFO | Early stopper, counter 1/10, best:0.7805 -> now:0.764
+2023-09-13 10:47:05,622 | train | INFO | --Train 11/20
+2023-09-13 10:47:05,973 | train | INFO | batch: 0/500 loss: 0.007777347229421139
+2023-09-13 10:47:31,058 | train | INFO | batch: 100/500 loss: 0.17023271322250366
+2023-09-13 10:47:55,984 | train | INFO | batch: 200/500 loss: 0.19029884040355682
+2023-09-13 10:48:20,911 | train | INFO | batch: 300/500 loss: 0.01387280598282814
+2023-09-13 10:48:45,750 | train | INFO | batch: 400/500 loss: 0.1839195340871811
+2023-09-13 10:49:10,483 | train | INFO | --Val 11/20
+2023-09-13 10:49:10,646 | train | INFO | batch: 0/125 loss: 1.1949610710144043
+2023-09-13 10:49:17,805 | train | INFO | batch: 100/125 loss: 1.5096149444580078
+2023-09-13 10:49:19,707 | train | INFO | Write row 11
+2023-09-13 10:49:20,533 | train | INFO | Early stopper, counter 0/10, best:0.7825 -> now:0.7825
+2023-09-13 10:49:20,533 | train | INFO | Set counter as 0
+2023-09-13 10:49:20,533 | train | INFO | Update best score as 0.7825
+2023-09-13 10:49:21,078 | train | INFO | Recorder, epoch 11 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:49:21,079 | train | INFO | --Train 12/20
+2023-09-13 10:49:21,426 | train | INFO | batch: 0/500 loss: 0.0023999111726880074
+2023-09-13 10:49:46,236 | train | INFO | batch: 100/500 loss: 0.010861900635063648
+2023-09-13 10:50:11,146 | train | INFO | batch: 200/500 loss: 0.3139737546443939
+2023-09-13 10:50:35,975 | train | INFO | batch: 300/500 loss: 0.011118697002530098
+2023-09-13 10:51:00,817 | train | INFO | batch: 400/500 loss: 0.019421853125095367
+2023-09-13 10:51:25,439 | train | INFO | --Val 12/20
+2023-09-13 10:51:25,673 | train | INFO | batch: 0/125 loss: 0.5327425003051758
+2023-09-13 10:51:32,595 | train | INFO | batch: 100/125 loss: 0.9025177955627441
+2023-09-13 10:51:34,251 | train | INFO | Write row 12
+2023-09-13 10:51:35,068 | train | INFO | Early stopper, counter 1/10, best:0.7825 -> now:0.7705
+2023-09-13 10:51:35,068 | train | INFO | --Train 13/20
+2023-09-13 10:51:35,405 | train | INFO | batch: 0/500 loss: 0.06286676228046417
+2023-09-13 10:52:00,306 | train | INFO | batch: 100/500 loss: 0.00375674432143569
+2023-09-13 10:52:25,166 | train | INFO | batch: 200/500 loss: 7.977040513651446e-05
+2023-09-13 10:52:49,874 | train | INFO | batch: 300/500 loss: 0.02580157481133938
+2023-09-13 10:53:14,742 | train | INFO | batch: 400/500 loss: 0.00933398213237524
+2023-09-13 10:53:39,427 | train | INFO | --Val 13/20
+2023-09-13 10:53:39,586 | train | INFO | batch: 0/125 loss: 1.1479541063308716
+2023-09-13 10:53:46,276 | train | INFO | batch: 100/125 loss: 1.4029544591903687
+2023-09-13 10:53:48,168 | train | INFO | Write row 13
+2023-09-13 10:53:49,671 | train | INFO | Early stopper, counter 2/10, best:0.7825 -> now:0.7805
+2023-09-13 10:53:49,671 | train | INFO | --Train 14/20
+2023-09-13 10:53:50,093 | train | INFO | batch: 0/500 loss: 0.0007151714526116848
+2023-09-13 10:54:14,796 | train | INFO | batch: 100/500 loss: 9.281424718210474e-05
+2023-09-13 10:54:39,733 | train | INFO | batch: 200/500 loss: 0.5413110852241516
+2023-09-13 10:55:04,621 | train | INFO | batch: 300/500 loss: 0.005863295868039131
+2023-09-13 10:55:29,464 | train | INFO | batch: 400/500 loss: 0.07021193206310272
+2023-09-13 10:55:53,940 | train | INFO | --Val 14/20
+2023-09-13 10:55:54,121 | train | INFO | batch: 0/125 loss: 0.6644997596740723
+2023-09-13 10:56:01,244 | train | INFO | batch: 100/125 loss: 1.522391438484192
+2023-09-13 10:56:02,885 | train | INFO | Write row 14
+2023-09-13 10:56:03,713 | train | INFO | Early stopper, counter 3/10, best:0.7825 -> now:0.764
+2023-09-13 10:56:03,713 | train | INFO | --Train 15/20
+2023-09-13 10:56:04,045 | train | INFO | batch: 0/500 loss: 0.011882872320711613
+2023-09-13 10:56:28,924 | train | INFO | batch: 100/500 loss: 0.0016336372354999185
+2023-09-13 10:56:53,733 | train | INFO | batch: 200/500 loss: 0.07300090044736862
+2023-09-13 10:57:18,531 | train | INFO | batch: 300/500 loss: 0.01237168163061142
+2023-09-13 10:57:43,451 | train | INFO | batch: 400/500 loss: 0.33325469493865967
+2023-09-13 10:58:08,174 | train | INFO | --Val 15/20
+2023-09-13 10:58:08,331 | train | INFO | batch: 0/125 loss: 1.1176323890686035
+2023-09-13 10:58:14,993 | train | INFO | batch: 100/125 loss: 1.788075566291809
+2023-09-13 10:58:16,698 | train | INFO | Write row 15
+2023-09-13 10:58:18,047 | train | INFO | Early stopper, counter 0/10, best:0.7875 -> now:0.7875
+2023-09-13 10:58:18,048 | train | INFO | Set counter as 0
+2023-09-13 10:58:18,048 | train | INFO | Update best score as 0.7875
+2023-09-13 10:58:18,966 | train | INFO | Recorder, epoch 15 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 10:58:18,967 | train | INFO | --Train 16/20
+2023-09-13 10:58:19,434 | train | INFO | batch: 0/500 loss: 0.016496341675519943
+2023-09-13 10:58:44,149 | train | INFO | batch: 100/500 loss: 0.04410288855433464
+2023-09-13 10:59:09,026 | train | INFO | batch: 200/500 loss: 0.05827927216887474
+2023-09-13 10:59:33,876 | train | INFO | batch: 300/500 loss: 0.00010624445712892339
+2023-09-13 10:59:58,708 | train | INFO | batch: 400/500 loss: 0.0746852457523346
+2023-09-13 11:00:23,312 | train | INFO | --Val 16/20
+2023-09-13 11:00:23,497 | train | INFO | batch: 0/125 loss: 0.5996074676513672
+2023-09-13 11:00:30,716 | train | INFO | batch: 100/125 loss: 2.5339765548706055
+2023-09-13 11:00:32,368 | train | INFO | Write row 16
+2023-09-13 11:00:33,235 | train | INFO | Early stopper, counter 1/10, best:0.7875 -> now:0.785
+2023-09-13 11:00:33,235 | train | INFO | --Train 17/20
+2023-09-13 11:00:33,569 | train | INFO | batch: 0/500 loss: 0.09698431938886642
+2023-09-13 11:00:58,415 | train | INFO | batch: 100/500 loss: 8.976974640972912e-05
+2023-09-13 11:01:23,210 | train | INFO | batch: 200/500 loss: 0.0025893221609294415
+2023-09-13 11:01:48,012 | train | INFO | batch: 300/500 loss: 0.004753631539642811
+2023-09-13 11:02:12,891 | train | INFO | batch: 400/500 loss: 0.7318642735481262
+2023-09-13 11:02:37,569 | train | INFO | --Val 17/20
+2023-09-13 11:02:37,729 | train | INFO | batch: 0/125 loss: 1.1739119291305542
+2023-09-13 11:02:44,404 | train | INFO | batch: 100/125 loss: 1.274807333946228
+2023-09-13 11:02:46,053 | train | INFO | Write row 17
+2023-09-13 11:02:46,973 | train | INFO | Early stopper, counter 0/10, best:0.812 -> now:0.812
+2023-09-13 11:02:46,973 | train | INFO | Set counter as 0
+2023-09-13 11:02:46,973 | train | INFO | Update best score as 0.812
+2023-09-13 11:02:47,760 | train | INFO | Recorder, epoch 17 Model saved: /content/results/train/20230913_192217/model.pt
+2023-09-13 11:02:47,762 | train | INFO | --Train 18/20
+2023-09-13 11:02:48,227 | train | INFO | batch: 0/500 loss: 0.002603940898552537
+2023-09-13 11:03:12,956 | train | INFO | batch: 100/500 loss: 0.2533726394176483
+2023-09-13 11:03:37,731 | train | INFO | batch: 200/500 loss: 0.04782972112298012
+2023-09-13 11:04:02,552 | train | INFO | batch: 300/500 loss: 0.05798617750406265
+2023-09-13 11:04:27,256 | train | INFO | batch: 400/500 loss: 0.001824256032705307
+2023-09-13 11:04:51,959 | train | INFO | --Val 18/20
+2023-09-13 11:04:52,125 | train | INFO | batch: 0/125 loss: 1.0169607400894165
+2023-09-13 11:04:59,333 | train | INFO | batch: 100/125 loss: 1.3113956451416016
+2023-09-13 11:05:00,980 | train | INFO | Write row 18
+2023-09-13 11:05:01,831 | train | INFO | Early stopper, counter 1/10, best:0.812 -> now:0.8025
+2023-09-13 11:05:01,831 | train | INFO | --Train 19/20
+2023-09-13 11:05:02,166 | train | INFO | batch: 0/500 loss: 0.021262437105178833
+2023-09-13 11:05:27,059 | train | INFO | batch: 100/500 loss: 0.0021411648485809565
+2023-09-13 11:05:51,821 | train | INFO | batch: 200/500 loss: 0.08736997842788696
+2023-09-13 11:06:16,688 | train | INFO | batch: 300/500 loss: 0.009556075558066368
+2023-09-13 11:06:41,565 | train | INFO | batch: 400/500 loss: 0.0044829812832176685
+2023-09-13 11:07:06,225 | train | INFO | --Val 19/20
+2023-09-13 11:07:06,467 | train | INFO | batch: 0/125 loss: 0.13844285905361176
+2023-09-13 11:07:13,313 | train | INFO | batch: 100/125 loss: 1.725877285003662
+2023-09-13 11:07:14,976 | train | INFO | Write row 19
+2023-09-13 11:07:15,879 | train | INFO | Early stopper, counter 2/10, best:0.812 -> now:0.8045
+2023-09-13 11:07:16,424 | train | INFO | Recorder, epoch 19 Model saved: /content/results/train/20230913_192217/model.pt

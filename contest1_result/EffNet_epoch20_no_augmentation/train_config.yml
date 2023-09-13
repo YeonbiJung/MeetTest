@@ -1,0 +1,37 @@
+DIRECTORY:
+  dataset: data/01_splitdataset
+TRAINER:
+  model: effnet
+  optimizer: adam
+  learning_rate: 0.0005
+  loss: crossentropy
+  metric:
+  - accuracy
+  - f1macro
+  n_epochs: 20
+  early_stopping_target: val_accuracy
+  early_stopping_patience: 10
+  early_stopping_mode: max
+  amp: false
+  gpu: 0
+  seed: 42
+MODEL:
+  Linear:
+    n_inputs: 784
+    n_outputs: 5
+  effnet:
+    n_outputs: 5
+DATALOADER:
+  batch_size: 16
+  num_workers: 1
+  shuffle: true
+  pin_memory: true
+  drop_last: false
+LOGGER:
+  wandb: false
+  logging_interval: 100
+  plot:
+  - loss
+  - accuracy
+  - f1macro
+  - elapsed_time
