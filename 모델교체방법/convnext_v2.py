@@ -13,7 +13,7 @@ class ConvNextV2(nn.Module):
             nn.ReLU(),
             nn.Linear(in_features=256, out_features=n_outputs)
         )
-        print(model)
+
     def forward(self, x):
         output = self.model(x)
         return output
