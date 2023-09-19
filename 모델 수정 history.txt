@@ -1,0 +1,68 @@
+=====================================================================
+초기 모델 성능 평가
+0)
+ EffNet_b4 기본 모델 성능 시험 epoch20, batch16, default learning rate(0.0005) 성능 시험
+ 결과 -> '정연비'님의 ai connect 제출 결과에 나와있습니다.
+=====================================================================
+ConvNext_v2 도입
+0.5)
+ ConvNext_v2 atto, base 훈련 실패(learning rate : default(5.0e-4)
+ 결과 -> github page 참고, training history에서 loss history 등 관련 자료 참고 가능
+1.0) 
+ ConvNext_v2 nano data augmentation lr1.0e-4 epoch5 batch16 성능 시험
+ 결과 -> github page 참고, ai connect에 제출은 안했으나 그때의, prediction.csv 올려둠
+=====================================================================
+data augmentation 성공 및 평가
+1.5) 
+ EffNet_b4 data augmentation epoch 3 batch16 성능 시험
+ 결과 -> '정연비' 님의 ai connect 제출 결과에 나와있습니다.
+=====================================================================
+data augmentation 적용 시험 평가
+2)
+ ConvNext_v2 nano data augmentation lr9.0e-5 epoch20 batch16 성능 시험
+ 결과 -> public score 0.9077, private score 0.9042, final score 0.9052
+=====================================================================
+모델 크기에 따른 성능 시험
+3)
+ ConvNext_v2 nano epoch10 batch16 lr9.0e-5 성능 시험
+ 결과 -> github page 참조, 마찬가지로 prediction.csv파일 존재합니다. 결과는 제출해서 확인.
+4)
+ ConvNext_v2 base epoch10 batch16 lr9.0e-5 성능 시험
+ 결과 -> public score 0.8438 private score 0.8465 final score 0.8457
+5)
+ ConvNext_v2 large epoch10 batch8(gpu memory limit) lr9.0e-5 성능 시험
+ 결과 -> public score 0.8160 private score 0.8312 final score 0.8267
+=====================================================================
+최고 모델 성능 시험
+6)
+ ConvNext_v2 base epoch20 data augmentation batch16 lr9.0e-5 성능 시험
+ 결과 -> public score 0.9134 private score 0.9117 final score 0.9122
+=====================================================================
+learning rate 변경 시험
+7)
+ ConvNext_v2 nano learning rate 1.0e-4, 2.0e-4, lr7.0e-5 epoch10 성능 시험
+ 결과 -> 모두 github page에 올려놨습니다. prediction.csv 파일 있으니 제출해보세요
+
+======================================================================
+classifier 변경 시험(더 무겁거나, 가볍게) (heavier, lighter)
+
+8) 
+ updated classier with data augmentation epoch 10 lr9.0e-5 batch 16
+ 결과 -> public score 0.8808 private score 0.8799 final score 0.8801
+
+8.5)
+ classifier 변경 (no augmentation, lr9.0e-5, batch16) convnext_v2 nano 성능 시험
+ 결과 -> 모두 github page에 올려놨습니다. prediction.csv 파일 있으니 제출해보세요
+======================================================================
+batch_size 32시도
+9)
+ ConvNext_v2 atto는 batch size 32에도 gpu limit에 걸리지 않음. lr9.0e-5 epoch20 batch32 no augmentation 성능 시험
+ 결과 -> github page에 올려놨습니다. prediction.csv 파일 있으니 제출해보세요
+ 
+ 
+모두 github page에 training history 자료들이 존재하니, ppt 만들 때 참고 가능.
+ 
+ 
+ 
+ 
+	
