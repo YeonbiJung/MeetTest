@@ -4,12 +4,12 @@ DIRECTORY:
 TRAINER :
   model: convnext_v2 #effnet #Linear
   optimizer: adamw # defaut -> adam
-  learning_rate: 5.0e-4
+  learning_rate: 9.0e-5
   loss: crossentropy
   metric:
     - accuracy
     - f1macro
-  n_epochs: 20 # default -> 3
+  n_epochs: 10 # default -> 3
   early_stopping_target: val_accuracy
   early_stopping_patience: 5 #default -> 10 
   early_stopping_mode: max
@@ -24,7 +24,7 @@ MODEL:
   effnet:
     n_outputs: 5
   convnext_v2: # for convnext_v2 number of outputs is 5 (1, 1+, 1++, 2, 3)
-  	n_outputs: 5
+    n_outputs: 5
   
 DATALOADER:
   batch_size: 16 # 32 possibile
