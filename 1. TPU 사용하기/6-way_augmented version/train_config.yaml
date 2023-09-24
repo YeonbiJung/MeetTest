@@ -1,0 +1,46 @@
+DIRECTORY:
+  dataset: data/01_splitdataset
+
+TRAINER :
+  model: convnext_v2 #effnet #Linear
+  optimizer: adamw # defaut -> adam
+  learning_rate: 9.0e-5
+  loss: crossentropy
+  metric:
+    - accuracy
+    - f1macro
+  n_epochs: 10 # default -> 3
+  early_stopping_target: val_accuracy
+  early_stopping_patience: 5 #default -> 10 
+  early_stopping_mode: max
+  amp: False
+  gpu: 0
+  seed: 42
+  
+MODEL:
+  Linear:
+    n_inputs:  784
+    n_outputs: 5
+  effnet:
+    n_outputs: 5
+  convnext_v2: # for convnext_v2 number of outputs is 5 (1, 1+, 1++, 2, 3)
+    n_outputs: 5
+  swin_transformer_v2:
+    n_outputs: 5
+  
+DATALOADER:
+  batch_size: 16 # 32 possibile
+  num_workers: 1
+  shuffle: False # sampler option is mutually exclusive with shuffle so it needs to be 'False'
+  pin_memory: True
+  drop_last: False
+
+LOGGER:
+  wandb: False
+  logging_interval: 100
+  plot:
+    - loss
+    - accuracy
+    - f1macro
+    - elapsed_time
+
