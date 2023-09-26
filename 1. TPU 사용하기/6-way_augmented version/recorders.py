@@ -74,7 +74,9 @@ class Recorder():
             }
         # instead of just saving with torch, we use torch_xla.core.xla_model
         #torch.save(check_point, self.weight_path)
-        xm.save(check_point, self.weight_path)
+        
+        #xm.save(check_point, self.weight_path)
+        xm.save(check_point, self.weight_path, global_master=True)
         
         msg = f"Recorder, epoch {epoch} Model saved: {self.weight_path}"
         self.logger.info(msg) if self.logger else None
