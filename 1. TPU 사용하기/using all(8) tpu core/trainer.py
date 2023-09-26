@@ -11,7 +11,7 @@ import torch_xla.distributed.parallel_loader as pl # for parallel loading
 
 class Trainer():
     
-    def __init__(self, model, optimizer, loss, metrics, device, logger, amp, interval=100):
+    def __init__(self, model, optimizer, loss, metrics, device, logger, amp, device_index, interval=100):
         self.model = model
         self.optimizer = optimizer
         self.loss = loss
@@ -30,14 +30,17 @@ class Trainer():
         self.y_preds = list()
         self.score_dict = dict()
         self.elapsed_time = 0
+        self.device_index = device_index
         
     def train(self, mode, dataloader, epoch_index=0):
         start_timestamp = time()
         self.model.train() if mode == 'train' else self.model.eval()
 
-        para_loader = pl.ParallelLoader(dataloader, [self.device], loader_prefetch_size=16, device_prefetch_size=8).per_device_loader(self.device)
+        para_loader = pl.ParallelLoader(dataloader, [self.device], loader_prefetch_size=8, device_prefetch_size=4).per_device_loader(self.device)
+        #mp_device_loader = pl.MpDeviceLoader(dataloader, self.device)
         for batch_index, (x,y) in enumerate(para_loader):
-            
+        
+        #for batch_index, (x,y) in mp_device_loader:
             x,y = x.to(self.device, dtype=torch.float), y.to(self.device, dtype=torch.long)
             
             # Inference
@@ -58,7 +61,7 @@ class Trainer():
                         scaled_loss.backward()
                     
                 #self.optimizer.step()
-                xm.optimizer_step(self.optimizer) # no need for barrier option
+                xm.optimizer_step(self.optimizer)
                 
             elif mode in ['val','test']:
                 pass
@@ -73,7 +76,7 @@ class Trainer():
             
             # Logging
             if batch_index % self.interval == 0:
-                msg = f"batch: {batch_index}/{len(dataloader)} loss: {loss.item()}"
+                msg = f"batch: {batch_index}/{len(dataloader)} loss: {loss.item()} - device_num : {self.device_index}"
                 self.logger.info(msg)
                 
         # Epoch history
