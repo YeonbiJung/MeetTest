@@ -91,6 +91,9 @@ tpu 사용해서 실험해 보기
 	ConvNext_v2_nano_epoch10_lr9.0e-5_batch16*8_4way_augmentation
 	결과 -> public score 0.8543 private score 0.8622 final score 0.8598
 	
+11.5)
+	ConvNext_v2_nano_epoch10_lr2.0e-4_batch16*8_4way_augmentation
+	결과 -> public score 0.8907 private score 0.8801 final score 0.8832
 
 	같은 세팅에서 gpu에 비해 성능이 떨어진다. lr을 조절해 봐야할 것 같다.
 ====================================================================
