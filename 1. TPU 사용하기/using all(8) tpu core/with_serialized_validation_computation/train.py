@@ -3,7 +3,7 @@ from modules.utils import load_yaml, save_yaml, get_logger
 from modules.earlystoppers import EarlyStopper
 from modules.recorders import Recorder
 from modules.datasets import CowDataset
-from modules.datasets import HFlipedDataset,VFlipedDataset,RotatedDataset,BlurredDataset, CCroppedDataset, RCroppedDataset
+from modules.datasets import HFlipedDataset,VFlipedDataset,RotatedDataset,BlurredDataset
 from modules.trainer import Trainer
 
 #from modules.preprocessor import get_preprocessor
@@ -55,6 +55,10 @@ random.seed(config['TRAINER']['seed'])
 # GPU
 os.environ['CUDA_VISIBLE_DEVICES'] = str(config['TRAINER']['gpu'])
 
+# for serialized running
+# at global scope...
+SERIAL_EXEC = xmp.MpSerialExecutor()
+
 
 if __name__ == '__main__':
 
@@ -84,16 +88,10 @@ if __name__ == '__main__':
     bl_dataset = BlurredDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
                               dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
                               )
-    cc_dataset = CCroppedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
-                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
-                              )   
-    rc_dataset = RCroppedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
-                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
-                              ) 
 
 
     # concatenate augmented train dataset
-    train_dataset = ConcatDataset([original_dataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset])
+    train_dataset = ConcatDataset([original_dataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset])
     val_dataset = CowDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
                              dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv'))
 
@@ -120,13 +118,59 @@ if __name__ == '__main__':
     # wrapping model for optimized memory usage in 'fork' method
     wrapped_model = xmp.MpModelWrapper(get_model(model_name = model_name, model_args = model_args))
 
-    # for serialized running
-    # SERIAL_EXEC = xmp.MpSerialExecutor()
+    def serial_early_stopping(flags:dict):
+
+        """
+        Validation
+        """
+ 
+        ######################################
+        val_dataloader = flags['val_dataloader']
+        row_dict = flags['row_dict']
+        trainer = flags['trainer']
+        epoch_index = flags['epoch_index']
+        n_epochs = flags['n_epochs']
+        index = flags['device_index']
+        recorder = flags['recorder'] 
+        ######################################
+        
+        #print(f"Val {epoch_index}/{n_epochs}")
+        xm.master_print(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")      
+        logger.info(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")
+
+
+        
+        trainer.train(dataloader=val_dataloader, epoch_index=epoch_index, mode='val')
+        
+        row_dict['val_loss'] = trainer.loss_mean
+        row_dict['val_elapsed_time'] = trainer.elapsed_time 
+        
+        for metric_str, score in trainer.score_dict.items():
+            row_dict[f"val_{metric_str}"] = score
+            
+
+        recorder.add_row(row_dict)
+        recorder.save_plot(config['LOGGER']['plot'])
+        
+
+        """
+        Early stopper
+        """
+        early_stopping_target = config['TRAINER']['early_stopping_target']
+        early_stopper.check_early_stopping(loss=row_dict[early_stopping_target])
+
+        if (early_stopper.patience_counter == 0) or (epoch_index == n_epochs-1):
+            recorder.save_weight(epoch=epoch_index)
+            best_row_dict = copy.deepcopy(row_dict)
+            
+        if early_stopper.stop == True:
+            logger.info(f"Eearly stopped, counter {early_stopper.patience_counter}/{config['TRAINER']['early_stopping_patience']}")
+
+        return
 
     
     def map_fn(index, args):
 
-        
         #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         #calling xla_device should be in local scope, so below code line belong to local scope
         device = xm.xla_device() #instead use xm.xla_device()
@@ -140,12 +184,6 @@ if __name__ == '__main__':
             rank=xm.get_ordinal(),
             shuffle=True)
         
-        val_sampler = torch.utils.data.distributed.DistributedSampler(
-            val_dataset,
-            num_replicas=xm.xrt_world_size(),
-            rank=xm.get_ordinal(),
-            shuffle=False)
-    
         # define DataLoader
         # because sampler option is mutually exclusive with shuffle, shuffle should be False in train_config file
         train_dataloader = DataLoader(dataset = train_dataset,
@@ -156,15 +194,16 @@ if __name__ == '__main__':
                                       drop_last = config['DATALOADER']['drop_last'],
                                       sampler = train_sampler
                                       )
+
+        
         val_dataloader = DataLoader(dataset = val_dataset,
                                     batch_size = config['DATALOADER']['batch_size'],
                                     num_workers = config['DATALOADER']['num_workers'], 
                                     shuffle = False,
                                     pin_memory = config['DATALOADER']['pin_memory'],
                                     drop_last = config['DATALOADER']['drop_last'],
-                                    sampler = val_sampler
                                     )
-
+        
         logger.info(f"Load data, train:{len(train_dataset)} val:{len(val_dataset)}--device_num:{index}")
 
 
@@ -217,19 +256,18 @@ if __name__ == '__main__':
         n_epochs = config['TRAINER']['n_epochs']
         epoch_ind = 0
         for epoch_index in range(n_epochs):
-            
+
             # Set Recorder row
             row_dict = dict()
             row_dict['epoch_index'] = epoch_index
             row_dict['train_serial'] = train_serial
-            
+                
             """
             Train
             """
-            
             # instead of use python built-in function, we use master_print()
             # print(f"Train {epoch_index}/{n_epochs}")
-            #xm.master_print(f"Train {epoch_index}/{n_epochs} -- device_num:{index}")       
+            xm.master_print(f"Train {epoch_index}/{n_epochs} -- device_num:{index}")       
             logger.info(f"--Train {epoch_index}/{n_epochs} -- device_num:{index}")
             
             trainer.train(dataloader=train_dataloader, epoch_index=epoch_index, mode='train')
@@ -239,56 +277,19 @@ if __name__ == '__main__':
             
             for metric_str, score in trainer.score_dict.items():
                 row_dict[f"train_{metric_str}"] = score
-            trainer.clear_history()
-            
-            """
-            Validation
-            """
-            
-            #print(f"Val {epoch_index}/{n_epochs}")
-            #xm.master_print(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")      
-            logger.info(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")
-            
-            trainer.train(dataloader=val_dataloader, epoch_index=epoch_index, mode='val')
-            
-            row_dict['val_loss'] = trainer.loss_mean
-            row_dict['val_elapsed_time'] = trainer.elapsed_time 
-            
-            for metric_str, score in trainer.score_dict.items():
-                row_dict[f"val_{metric_str}"] = score
-            trainer.clear_history()
-
-
-            # only record device:0 information
-            if index == 0:
-                """
-                Record
-                """
-                recorder.add_row(row_dict)
-                recorder.save_plot(config['LOGGER']['plot'])
-
-
-            # Early Stopping does not work anymore. 2000 validation data is divided by 8,
-            # so this little data amount won't prove to be useful
-            """
-            Early stopper
-            """
-            #early_stopping_target = config['TRAINER']['early_stopping_target']
-            #early_stopper.check_early_stopping(loss=row_dict[early_stopping_target])
-
-            #if (early_stopper.patience_counter == 0) or (epoch_index == n_epochs-1):
-            #    recorder.save_weight(epoch=epoch_index)
-            #    best_row_dict = copy.deepcopy(row_dict)
                 
-            #if early_stopper.stop == True:
-            #    logger.info(f"Eearly stopped, counter {early_stopper.patience_counter}/{config['TRAINER']['early_stopping_patience']}")
-            ##xm.wait_device_ops(devices=[device])##
-            epoch_ind = epoch_index
+            trainer.clear_history()
 
-        # instead we save only last trained model...
-        recorder.save_weight(epoch=epoch_ind)
+            dic = {'epoch_index':epoch_index, 'trainer':trainer, 'n_epochs':n_epochs,
+                   'device_index' : index, 'recorder':recorder, 'row_dict':row_dict,
+                   'val_dataloader':val_dataloader}
+            
+            SERIAL_EXEC.run(lambda: serial_early_stopping(dic))
+            
+            trainer.clear_history()
+            logger.info('---- next train step ---- ')
+            
 
     #execution
     flags = {}
     xmp.spawn(map_fn, args = (flags, ), nprocs=8, start_method='fork') 
-    #xmp.spwan(map_fn, args=(flags, ), start_method='fork')

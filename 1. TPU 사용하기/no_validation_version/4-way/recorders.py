@@ -89,7 +89,7 @@ class Recorder():
         color_list = ['red', 'blue']  # train, val
 
         for plot_name in plots:
-            columns = [f'train_{plot_name}', f'val_{plot_name}']
+            columns = [f'train_{plot_name}']
 
             fig = plt.figure(figsize=(20, 8))
             

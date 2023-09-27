@@ -223,7 +223,7 @@ if __name__ == '__main__':
             
             # instead of use python built-in function, we use master_print()
             # print(f"Train {epoch_index}/{n_epochs}")
-            xm.master_print(f"Train {epoch_index}/{n_epochs} -- device_num:{index}")       
+            #xm.master_print(f"Train {epoch_index}/{n_epochs} -- device_num:{index}")       
             logger.info(f"--Train {epoch_index}/{n_epochs} -- device_num:{index}")
             
             trainer.train(dataloader=train_dataloader, epoch_index=epoch_index, mode='train')
@@ -240,7 +240,7 @@ if __name__ == '__main__':
             """
             
             #print(f"Val {epoch_index}/{n_epochs}")
-            xm.master_print(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")      
+            #xm.master_print(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")      
             logger.info(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")
             
             trainer.train(dataloader=val_dataloader, epoch_index=epoch_index, mode='val')

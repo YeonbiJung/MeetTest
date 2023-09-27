@@ -3,7 +3,7 @@ from modules.utils import load_yaml, save_yaml, get_logger
 from modules.earlystoppers import EarlyStopper
 from modules.recorders import Recorder
 from modules.datasets import CowDataset
-from modules.datasets import HFlipedDataset,VFlipedDataset,RotatedDataset,BlurredDataset, CCroppedDataset, RCroppedDataset
+from modules.datasets import HFlipedDataset,VFlipedDataset,RotatedDataset,BlurredDataset,CCroppedDataset,RCroppedDataset
 from modules.trainer import Trainer
 
 #from modules.preprocessor import get_preprocessor
@@ -86,18 +86,40 @@ if __name__ == '__main__':
                               )
     cc_dataset = CCroppedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
                               dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
-                              )   
+                              )
     rc_dataset = RCroppedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
                               dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
-                              ) 
-
-
-    # concatenate augmented train dataset
-    train_dataset = ConcatDataset([original_dataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset])
+                              )
+    
+    
     val_dataset = CowDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
-                             dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv'))
-
-
+                         dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv')
+                              )
+    vhf_dataset = HFlipedDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv')
+                              )
+    vvf_dataset = VFlipedDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv')
+                              )
+    vrt_dataset = RotatedDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv')
+                              )
+    vbl_dataset = BlurredDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv')
+                              )
+    vcc_dataset = CCroppedDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
+                              )
+    vrc_dataset = RCroppedDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
+                              )
+    
+    
+    
+    # concatenate augmented train dataset
+    train_dataset = ConcatDataset([original_dataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset,
+                                   val_dataset, vhf_dataset, vvf_dataset, vrt_dataset, vbl_dataset,vcc_dataset,vrc_dataset])
+    
     '''
     Set trainer
     '''
@@ -120,9 +142,6 @@ if __name__ == '__main__':
     # wrapping model for optimized memory usage in 'fork' method
     wrapped_model = xmp.MpModelWrapper(get_model(model_name = model_name, model_args = model_args))
 
-    # for serialized running
-    # SERIAL_EXEC = xmp.MpSerialExecutor()
-
     
     def map_fn(index, args):
 
@@ -139,13 +158,7 @@ if __name__ == '__main__':
             num_replicas=xm.xrt_world_size(),
             rank=xm.get_ordinal(),
             shuffle=True)
-        
-        val_sampler = torch.utils.data.distributed.DistributedSampler(
-            val_dataset,
-            num_replicas=xm.xrt_world_size(),
-            rank=xm.get_ordinal(),
-            shuffle=False)
-    
+ 
         # define DataLoader
         # because sampler option is mutually exclusive with shuffle, shuffle should be False in train_config file
         train_dataloader = DataLoader(dataset = train_dataset,
@@ -156,17 +169,8 @@ if __name__ == '__main__':
                                       drop_last = config['DATALOADER']['drop_last'],
                                       sampler = train_sampler
                                       )
-        val_dataloader = DataLoader(dataset = val_dataset,
-                                    batch_size = config['DATALOADER']['batch_size'],
-                                    num_workers = config['DATALOADER']['num_workers'], 
-                                    shuffle = False,
-                                    pin_memory = config['DATALOADER']['pin_memory'],
-                                    drop_last = config['DATALOADER']['drop_last'],
-                                    sampler = val_sampler
-                                    )
 
         logger.info(f"Load data, train:{len(train_dataset)} val:{len(val_dataset)}--device_num:{index}")
-
 
         '''
         Set model
@@ -178,14 +182,11 @@ if __name__ == '__main__':
         optimizer = get_optimizer(optimizer_name=config['TRAINER']['optimizer'])
         optimizer = optimizer(params=model.parameters(),lr=config['TRAINER']['learning_rate'])
 
-        
-
         # AMP
         if config['TRAINER']['amp'] == True:
             from apex import amp
             model, optimizer = amp.initialize(model, optimizer, opt_level='O1')
 
-        
         # Trainer
         trainer = Trainer(model=model,
                           optimizer=optimizer,
@@ -240,24 +241,6 @@ if __name__ == '__main__':
             for metric_str, score in trainer.score_dict.items():
                 row_dict[f"train_{metric_str}"] = score
             trainer.clear_history()
-            
-            """
-            Validation
-            """
-            
-            #print(f"Val {epoch_index}/{n_epochs}")
-            #xm.master_print(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")      
-            logger.info(f"--Val {epoch_index}/{n_epochs} -- device_num:{index}")
-            
-            trainer.train(dataloader=val_dataloader, epoch_index=epoch_index, mode='val')
-            
-            row_dict['val_loss'] = trainer.loss_mean
-            row_dict['val_elapsed_time'] = trainer.elapsed_time 
-            
-            for metric_str, score in trainer.score_dict.items():
-                row_dict[f"val_{metric_str}"] = score
-            trainer.clear_history()
-
 
             # only record device:0 information
             if index == 0:
@@ -266,23 +249,7 @@ if __name__ == '__main__':
                 """
                 recorder.add_row(row_dict)
                 recorder.save_plot(config['LOGGER']['plot'])
-
-
-            # Early Stopping does not work anymore. 2000 validation data is divided by 8,
-            # so this little data amount won't prove to be useful
-            """
-            Early stopper
-            """
-            #early_stopping_target = config['TRAINER']['early_stopping_target']
-            #early_stopper.check_early_stopping(loss=row_dict[early_stopping_target])
-
-            #if (early_stopper.patience_counter == 0) or (epoch_index == n_epochs-1):
-            #    recorder.save_weight(epoch=epoch_index)
-            #    best_row_dict = copy.deepcopy(row_dict)
                 
-            #if early_stopper.stop == True:
-            #    logger.info(f"Eearly stopped, counter {early_stopper.patience_counter}/{config['TRAINER']['early_stopping_patience']}")
-            ##xm.wait_device_ops(devices=[device])##
             epoch_ind = epoch_index
 
         # instead we save only last trained model...
