@@ -44,8 +44,9 @@ learning rate 변경 시험
 7)
  ConvNext_v2 nano learning rate 1.0e-4, 2.0e-4, lr7.0e-5 epoch10 성능 시험
  결과 -> 1.0e-4 : public score 0.7696, private score 0.7804 final score 0.7772
- 		 -> 2.0e-4 : 
- 		 -> 7.0e-5 : 
+ 		 -> 2.0e-4 : public score 0.7766, private score 0.7998 final score 0.7928
+ 		 -> 7.0e-5 : public score 0.7858, private score 0.7857 final score 0.7858
+ 		 -? 9.0e-5 : public score 0.8311  private score 0.8142 final score 0.8193
 	
 	9.0e-5가 가장 적당한 것으로 보인다.
 ======================================================================
