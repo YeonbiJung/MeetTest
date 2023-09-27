@@ -7,7 +7,7 @@
 ConvNext_v2 도입
 0.5)
  ConvNext_v2 atto, base 훈련 실패(learning rate : default(5.0e-4)
- 결과 -> github page 참고, training history에서 loss history 등 관련 자료 참고 가능
+ 결과 -> 훈련 실패
 1.0) 
  ConvNext_v2 nano data augmentation lr1.0e-4 epoch5 batch16 성능 시험
  결과 -> github page 참고, ai connect에 제출은 안했으나 그때의, prediction.csv 올려둠
@@ -26,11 +26,14 @@ data augmentation 적용 시험 평가
 3)
  ConvNext_v2 nano epoch10 batch16 lr9.0e-5 성능 시험
  결과 -> public score 0.8311 private score 0.8142 final score 0.8193
+4)
  ConvNext_v2 base epoch10 batch16 lr9.0e-5 성능 시험
  결과 -> public score 0.8438 private score 0.8465 final score 0.8457
 5)
  ConvNext_v2 large epoch10 batch8(gpu memory limit) lr9.0e-5 성능 시험
  결과 -> public score 0.8160 private score 0.8312 final score 0.8267
+ 
+ base가 가장 적당한 것으로 보인다.
 =====================================================================
 최고 모델 성능 시험
 6)
@@ -43,7 +46,8 @@ learning rate 변경 시험
  결과 -> 1.0e-4 : public score 0.7696, private score 0.7804 final score 0.7772
  		 -> 2.0e-4 : 
  		 -> 7.0e-5 : 
-
+	
+	9.0e-5가 가장 적당한 것으로 보인다.
 ======================================================================
 classifier 변경 시험(더 무겁거나, 가볍게) (heavier, lighter)
 
@@ -54,13 +58,16 @@ classifier 변경 시험(더 무겁거나, 가볍게) (heavier, lighter)
 8.5)
  classifier 변경 (no augmentation, lr9.0e-5, batch16) convnext_v2 nano 성능 시험
  결과 -> 모두 github page에 올려놨습니다. prediction.csv 파일 있으니 제출해보세요
+ 
+ default로 사용해 왔던것이 가장 좋은 걸로 들어남.
 ======================================================================
 batch_size 32시도
 
 9)
  ConvNext_v2 atto는 batch size 32에도 gpu limit에 걸리지 않음. lr9.0e-5 epoch20 batch32 no augmentation 성능 시험
  결과 -> github page에 올려놨습니다. prediction.csv 파일 있으니 제출해보세요
-
+ 
+	크기가 atto여서 모델 성능 향상에 한계
 ======================================================================
 6-way data augmentation
 
@@ -84,8 +91,8 @@ tpu 사용해서 실험해 보기
 	결과 -> public score 0.8543 private score 0.8622 final score 0.8598
 	
 
-
-
+	같은 세팅에서 gpu에 비해 성능이 떨어진다. lr을 조절해 봐야할 것 같다.
+====================================================================
  
  
 
