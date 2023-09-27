@@ -25,8 +25,7 @@ data augmentation 적용 시험 평가
 모델 크기에 따른 성능 시험
 3)
  ConvNext_v2 nano epoch10 batch16 lr9.0e-5 성능 시험
- 결과 -> github page 참조, 마찬가지로 prediction.csv파일 존재합니다. 결과는 제출해서 확인.
-4)
+ 결과 -> public score 0.8311 private score 0.8142 final score 0.8193
  ConvNext_v2 base epoch10 batch16 lr9.0e-5 성능 시험
  결과 -> public score 0.8438 private score 0.8465 final score 0.8457
 5)
@@ -41,7 +40,8 @@ data augmentation 적용 시험 평가
 learning rate 변경 시험
 7)
  ConvNext_v2 nano learning rate 1.0e-4, 2.0e-4, lr7.0e-5 epoch10 성능 시험
- 결과 -> 모두 github page에 올려놨습니다. prediction.csv 파일 있으니 제출해보세요
+ 결과 -> 1.0e-4 : public score 0.7696, private score 0.7804 final score 0.7772
+ 		 -> 2.0e-4 : 
 
 ======================================================================
 classifier 변경 시험(더 무겁거나, 가볍게) (heavier, lighter)
