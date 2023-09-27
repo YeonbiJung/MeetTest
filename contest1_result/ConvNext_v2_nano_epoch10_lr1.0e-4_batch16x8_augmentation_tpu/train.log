@@ -1,0 +1,588 @@
+2023-09-27 10:00:44,163 | train | INFO | Set Logger /content/results/train/20230927_190044
+2023-09-27 10:00:44,236 | train | INFO | Initiated early stopper, mode: max, best score: inf, patience: 5
+2023-09-27 10:00:52,318 | train | INFO | Load data, train:40000 val:2000--device_num:0
+2023-09-27 10:00:53,528 | train | INFO | --Train 0/10 -- device_num:0
+2023-09-27 10:00:53,830 | train | INFO | Load data, train:40000 val:2000--device_num:4
+2023-09-27 10:00:53,865 | train | INFO | Load data, train:40000 val:2000--device_num:3
+2023-09-27 10:00:54,243 | train | INFO | Load data, train:40000 val:2000--device_num:2
+2023-09-27 10:00:54,306 | train | INFO | Load data, train:40000 val:2000--device_num:6
+2023-09-27 10:00:54,415 | train | INFO | Load data, train:40000 val:2000--device_num:5
+2023-09-27 10:00:54,512 | train | INFO | Load data, train:40000 val:2000--device_num:1
+2023-09-27 10:00:55,342 | train | INFO | Load data, train:40000 val:2000--device_num:7
+2023-09-27 10:00:56,209 | train | INFO | --Train 0/10 -- device_num:4
+2023-09-27 10:00:58,557 | train | INFO | --Train 0/10 -- device_num:3
+2023-09-27 10:01:00,357 | train | INFO | --Train 0/10 -- device_num:2
+2023-09-27 10:01:02,583 | train | INFO | --Train 0/10 -- device_num:6
+2023-09-27 10:01:05,000 | train | INFO | --Train 0/10 -- device_num:5
+2023-09-27 10:01:05,112 | train | INFO | batch: 0/313 loss: 8.962077140808105 - device_num : 0
+2023-09-27 10:01:05,114 | train | INFO | batch: 0/313 loss: 8.706995010375977 - device_num : 3
+2023-09-27 10:01:05,126 | train | INFO | batch: 0/313 loss: 8.796009063720703 - device_num : 2
+2023-09-27 10:01:05,215 | train | INFO | batch: 0/313 loss: 8.427480697631836 - device_num : 4
+2023-09-27 10:01:06,815 | train | INFO | --Train 0/10 -- device_num:1
+2023-09-27 10:01:06,966 | train | INFO | batch: 0/313 loss: 8.7989501953125 - device_num : 6
+2023-09-27 10:01:09,293 | train | INFO | batch: 0/313 loss: 8.579265594482422 - device_num : 5
+2023-09-27 10:01:09,392 | train | INFO | --Train 0/10 -- device_num:7
+2023-09-27 10:01:10,393 | train | INFO | batch: 0/313 loss: 8.40436840057373 - device_num : 1
+2023-09-27 10:01:11,885 | train | INFO | batch: 0/313 loss: 8.437182426452637 - device_num : 7
+2023-09-27 10:04:31,979 | train | INFO | batch: 100/313 loss: 1.3801286220550537 - device_num : 0
+2023-09-27 10:04:32,119 | train | INFO | batch: 100/313 loss: 1.3993113040924072 - device_num : 1
+2023-09-27 10:04:32,133 | train | INFO | batch: 100/313 loss: 1.4872381687164307 - device_num : 6
+2023-09-27 10:04:32,158 | train | INFO | batch: 100/313 loss: 1.1933763027191162 - device_num : 2
+2023-09-27 10:04:32,212 | train | INFO | batch: 100/313 loss: 1.2366271018981934 - device_num : 3
+2023-09-27 10:04:32,233 | train | INFO | batch: 100/313 loss: 1.3401432037353516 - device_num : 7
+2023-09-27 10:04:32,255 | train | INFO | batch: 100/313 loss: 1.2300317287445068 - device_num : 4
+2023-09-27 10:04:32,354 | train | INFO | batch: 100/313 loss: 1.1782540082931519 - device_num : 5
+2023-09-27 10:07:15,691 | train | INFO | batch: 200/313 loss: 1.0464757680892944 - device_num : 3
+2023-09-27 10:07:15,811 | train | INFO | batch: 200/313 loss: 0.8752018809318542 - device_num : 5
+2023-09-27 10:07:15,827 | train | INFO | batch: 200/313 loss: 1.1004728078842163 - device_num : 7
+2023-09-27 10:07:15,832 | train | INFO | batch: 200/313 loss: 0.9984899163246155 - device_num : 4
+2023-09-27 10:07:15,837 | train | INFO | batch: 200/313 loss: 1.1009135246276855 - device_num : 2
+2023-09-27 10:07:15,859 | train | INFO | batch: 200/313 loss: 0.8064419627189636 - device_num : 6
+2023-09-27 10:07:15,873 | train | INFO | batch: 200/313 loss: 0.9199459552764893 - device_num : 1
+2023-09-27 10:07:15,954 | train | INFO | batch: 200/313 loss: 1.302738904953003 - device_num : 0
+2023-09-27 10:10:00,406 | train | INFO | batch: 300/313 loss: 0.6912735104560852 - device_num : 1
+2023-09-27 10:10:00,411 | train | INFO | batch: 300/313 loss: 0.9343857169151306 - device_num : 0
+2023-09-27 10:10:00,410 | train | INFO | batch: 300/313 loss: 0.7586497068405151 - device_num : 3
+2023-09-27 10:10:00,429 | train | INFO | batch: 300/313 loss: 1.232773780822754 - device_num : 7
+2023-09-27 10:10:00,434 | train | INFO | batch: 300/313 loss: 0.8415157198905945 - device_num : 6
+2023-09-27 10:10:00,442 | train | INFO | batch: 300/313 loss: 0.7186545729637146 - device_num : 4
+2023-09-27 10:10:00,448 | train | INFO | batch: 300/313 loss: 0.7634206414222717 - device_num : 2
+2023-09-27 10:10:00,447 | train | INFO | batch: 300/313 loss: 0.6871266961097717 - device_num : 5
+2023-09-27 10:10:43,933 | train | INFO | --Val 0/10 -- device_num:5
+2023-09-27 10:10:43,936 | train | INFO | --Val 0/10 -- device_num:1
+2023-09-27 10:10:43,929 | train | INFO | --Val 0/10 -- device_num:4
+2023-09-27 10:10:43,928 | train | INFO | --Val 0/10 -- device_num:2
+2023-09-27 10:10:43,973 | train | INFO | --Val 0/10 -- device_num:6
+2023-09-27 10:10:44,062 | train | INFO | --Val 0/10 -- device_num:0
+2023-09-27 10:10:44,129 | train | INFO | --Val 0/10 -- device_num:7
+2023-09-27 10:10:44,135 | train | INFO | --Val 0/10 -- device_num:3
+2023-09-27 10:10:50,873 | train | INFO | batch: 0/16 loss: 0.720536470413208 - device_num : 4
+2023-09-27 10:10:51,447 | train | INFO | batch: 0/16 loss: 0.9519190788269043 - device_num : 1
+2023-09-27 10:10:52,779 | train | INFO | batch: 0/16 loss: 0.620795726776123 - device_num : 6
+2023-09-27 10:10:53,124 | train | INFO | batch: 0/16 loss: 0.8080265522003174 - device_num : 5
+2023-09-27 10:10:53,280 | train | INFO | batch: 0/16 loss: 1.3514606952667236 - device_num : 3
+2023-09-27 10:10:53,416 | train | INFO | batch: 0/16 loss: 0.9006055593490601 - device_num : 7
+2023-09-27 10:10:53,641 | train | INFO | batch: 0/16 loss: 0.9129398465156555 - device_num : 0
+2023-09-27 10:10:53,654 | train | INFO | batch: 0/16 loss: 0.9606046080589294 - device_num : 2
+2023-09-27 10:11:24,166 | train | INFO | --Train 1/10 -- device_num:6
+2023-09-27 10:11:24,169 | train | INFO | --Train 1/10 -- device_num:7
+2023-09-27 10:11:24,172 | train | INFO | --Train 1/10 -- device_num:3
+2023-09-27 10:11:24,175 | train | INFO | --Train 1/10 -- device_num:1
+2023-09-27 10:11:24,179 | train | INFO | --Train 1/10 -- device_num:5
+2023-09-27 10:11:24,216 | train | INFO | Write row 0
+2023-09-27 10:11:24,224 | train | INFO | --Train 1/10 -- device_num:4
+2023-09-27 10:11:24,284 | train | INFO | --Train 1/10 -- device_num:2
+2023-09-27 10:11:33,930 | train | INFO | batch: 0/313 loss: 0.806256890296936 - device_num : 1
+2023-09-27 10:11:34,648 | train | INFO | batch: 0/313 loss: 0.7350641489028931 - device_num : 4
+2023-09-27 10:11:34,649 | train | INFO | batch: 0/313 loss: 0.6968958973884583 - device_num : 3
+2023-09-27 10:11:34,958 | train | INFO | batch: 0/313 loss: 0.8281736969947815 - device_num : 7
+2023-09-27 10:11:35,035 | train | INFO | batch: 0/313 loss: 1.0354812145233154 - device_num : 6
+2023-09-27 10:11:35,219 | train | INFO | batch: 0/313 loss: 1.0168722867965698 - device_num : 5
+2023-09-27 10:11:35,387 | train | INFO | batch: 0/313 loss: 0.8458037376403809 - device_num : 2
+2023-09-27 10:11:38,957 | train | INFO | --Train 1/10 -- device_num:0
+2023-09-27 10:11:40,413 | train | INFO | batch: 0/313 loss: 1.0245416164398193 - device_num : 0
+2023-09-27 10:14:24,666 | train | INFO | batch: 100/313 loss: 0.7671428322792053 - device_num : 4
+2023-09-27 10:14:24,686 | train | INFO | batch: 100/313 loss: 0.9313300848007202 - device_num : 6
+2023-09-27 10:14:24,699 | train | INFO | batch: 100/313 loss: 0.5344156622886658 - device_num : 3
+2023-09-27 10:14:24,742 | train | INFO | batch: 100/313 loss: 0.7749475836753845 - device_num : 5
+2023-09-27 10:14:24,757 | train | INFO | batch: 100/313 loss: 1.2295749187469482 - device_num : 0
+2023-09-27 10:14:24,790 | train | INFO | batch: 100/313 loss: 0.7524982690811157 - device_num : 1
+2023-09-27 10:14:24,824 | train | INFO | batch: 100/313 loss: 0.6316948533058167 - device_num : 2
+2023-09-27 10:14:24,842 | train | INFO | batch: 100/313 loss: 0.9078478813171387 - device_num : 7
+2023-09-27 10:17:07,476 | train | INFO | batch: 200/313 loss: 0.7155909538269043 - device_num : 6
+2023-09-27 10:17:07,479 | train | INFO | batch: 200/313 loss: 0.25184720754623413 - device_num : 5
+2023-09-27 10:17:07,491 | train | INFO | batch: 200/313 loss: 0.7411212921142578 - device_num : 4
+2023-09-27 10:17:07,515 | train | INFO | batch: 200/313 loss: 0.4165351986885071 - device_num : 0
+2023-09-27 10:17:07,574 | train | INFO | batch: 200/313 loss: 0.3015882074832916 - device_num : 2
+2023-09-27 10:17:07,690 | train | INFO | batch: 200/313 loss: 0.1300731599330902 - device_num : 3
+2023-09-27 10:17:07,828 | train | INFO | batch: 200/313 loss: 0.3257531523704529 - device_num : 1
+2023-09-27 10:17:07,875 | train | INFO | batch: 200/313 loss: 0.6620268225669861 - device_num : 7
+2023-09-27 10:19:53,836 | train | INFO | batch: 300/313 loss: 0.2235082983970642 - device_num : 3
+2023-09-27 10:19:53,988 | train | INFO | batch: 300/313 loss: 0.44637441635131836 - device_num : 2
+2023-09-27 10:19:54,143 | train | INFO | batch: 300/313 loss: 0.24046996235847473 - device_num : 6
+2023-09-27 10:19:54,305 | train | INFO | batch: 300/313 loss: 0.4914245009422302 - device_num : 0
+2023-09-27 10:19:54,367 | train | INFO | batch: 300/313 loss: 0.17027288675308228 - device_num : 5
+2023-09-27 10:19:54,400 | train | INFO | batch: 300/313 loss: 0.2692301571369171 - device_num : 7
+2023-09-27 10:19:54,535 | train | INFO | batch: 300/313 loss: 0.2581422030925751 - device_num : 4
+2023-09-27 10:19:54,601 | train | INFO | batch: 300/313 loss: 0.13982835412025452 - device_num : 1
+2023-09-27 10:20:06,184 | train | INFO | --Val 1/10 -- device_num:5
+2023-09-27 10:20:06,195 | train | INFO | --Val 1/10 -- device_num:0
+2023-09-27 10:20:06,196 | train | INFO | --Val 1/10 -- device_num:4
+2023-09-27 10:20:06,198 | train | INFO | --Val 1/10 -- device_num:2
+2023-09-27 10:20:06,223 | train | INFO | --Val 1/10 -- device_num:7
+2023-09-27 10:20:06,248 | train | INFO | --Val 1/10 -- device_num:1
+2023-09-27 10:20:06,258 | train | INFO | --Val 1/10 -- device_num:3
+2023-09-27 10:20:06,289 | train | INFO | --Val 1/10 -- device_num:6
+2023-09-27 10:20:11,576 | train | INFO | batch: 0/16 loss: 0.353221595287323 - device_num : 4
+2023-09-27 10:20:12,249 | train | INFO | batch: 0/16 loss: 1.1378412246704102 - device_num : 0
+2023-09-27 10:20:12,721 | train | INFO | batch: 0/16 loss: 0.8228157758712769 - device_num : 5
+2023-09-27 10:20:13,746 | train | INFO | batch: 0/16 loss: 0.7500925660133362 - device_num : 2
+2023-09-27 10:20:13,927 | train | INFO | batch: 0/16 loss: 0.5026978850364685 - device_num : 1
+2023-09-27 10:20:14,024 | train | INFO | batch: 0/16 loss: 0.6701182723045349 - device_num : 6
+2023-09-27 10:20:14,230 | train | INFO | batch: 0/16 loss: 0.583030104637146 - device_num : 3
+2023-09-27 10:20:14,431 | train | INFO | batch: 0/16 loss: 0.7900176644325256 - device_num : 7
+2023-09-27 10:20:21,177 | train | INFO | --Train 2/10 -- device_num:4
+2023-09-27 10:20:21,490 | train | INFO | --Train 2/10 -- device_num:5
+2023-09-27 10:20:21,683 | train | INFO | Write row 1
+2023-09-27 10:20:21,770 | train | INFO | --Train 2/10 -- device_num:3
+2023-09-27 10:20:22,027 | train | INFO | --Train 2/10 -- device_num:7
+2023-09-27 10:20:22,109 | train | INFO | --Train 2/10 -- device_num:2
+2023-09-27 10:20:22,193 | train | INFO | --Train 2/10 -- device_num:1
+2023-09-27 10:20:22,224 | train | INFO | --Train 2/10 -- device_num:6
+2023-09-27 10:20:27,048 | train | INFO | batch: 0/313 loss: 0.3201744556427002 - device_num : 4
+2023-09-27 10:20:27,508 | train | INFO | batch: 0/313 loss: 0.7536652088165283 - device_num : 5
+2023-09-27 10:20:27,576 | train | INFO | batch: 0/313 loss: 0.252002090215683 - device_num : 3
+2023-09-27 10:20:28,103 | train | INFO | batch: 0/313 loss: 0.18979434669017792 - device_num : 1
+2023-09-27 10:20:29,123 | train | INFO | batch: 0/313 loss: 0.4079890251159668 - device_num : 2
+2023-09-27 10:20:29,232 | train | INFO | batch: 0/313 loss: 0.3423447012901306 - device_num : 7
+2023-09-27 10:20:29,723 | train | INFO | batch: 0/313 loss: 0.3308219611644745 - device_num : 6
+2023-09-27 10:20:32,014 | train | INFO | --Train 2/10 -- device_num:0
+2023-09-27 10:20:35,544 | train | INFO | batch: 0/313 loss: 0.2585206925868988 - device_num : 0
+2023-09-27 10:23:18,026 | train | INFO | batch: 100/313 loss: 0.3279990553855896 - device_num : 1
+2023-09-27 10:23:18,041 | train | INFO | batch: 100/313 loss: 0.12971742451190948 - device_num : 7
+2023-09-27 10:23:18,150 | train | INFO | batch: 100/313 loss: 0.08814772963523865 - device_num : 2
+2023-09-27 10:23:18,209 | train | INFO | batch: 100/313 loss: 0.40568816661834717 - device_num : 6
+2023-09-27 10:23:18,245 | train | INFO | batch: 100/313 loss: 0.45672428607940674 - device_num : 0
+2023-09-27 10:23:18,277 | train | INFO | batch: 100/313 loss: 0.06952634453773499 - device_num : 3
+2023-09-27 10:23:18,453 | train | INFO | batch: 100/313 loss: 0.16464270651340485 - device_num : 4
+2023-09-27 10:23:18,553 | train | INFO | batch: 100/313 loss: 0.23039761185646057 - device_num : 5
+2023-09-27 10:26:02,840 | train | INFO | batch: 200/313 loss: 0.4134541451931 - device_num : 7
+2023-09-27 10:26:03,005 | train | INFO | batch: 200/313 loss: 0.22846619784832 - device_num : 5
+2023-09-27 10:26:03,308 | train | INFO | batch: 200/313 loss: 0.15120603144168854 - device_num : 0
+2023-09-27 10:26:03,344 | train | INFO | batch: 200/313 loss: 0.12080082297325134 - device_num : 3
+2023-09-27 10:26:03,392 | train | INFO | batch: 200/313 loss: 0.030354589223861694 - device_num : 2
+2023-09-27 10:26:03,403 | train | INFO | batch: 200/313 loss: 0.32542961835861206 - device_num : 6
+2023-09-27 10:26:03,540 | train | INFO | batch: 200/313 loss: 0.1619860827922821 - device_num : 4
+2023-09-27 10:26:03,676 | train | INFO | batch: 200/313 loss: 0.09662789851427078 - device_num : 1
+2023-09-27 10:28:50,850 | train | INFO | batch: 300/313 loss: 0.21825866401195526 - device_num : 4
+2023-09-27 10:28:50,925 | train | INFO | batch: 300/313 loss: 0.0731295570731163 - device_num : 5
+2023-09-27 10:28:50,927 | train | INFO | batch: 300/313 loss: 0.40214985609054565 - device_num : 7
+2023-09-27 10:28:51,020 | train | INFO | batch: 300/313 loss: 0.47882282733917236 - device_num : 2
+2023-09-27 10:28:51,228 | train | INFO | batch: 300/313 loss: 0.08667465299367905 - device_num : 1
+2023-09-27 10:28:51,232 | train | INFO | batch: 300/313 loss: 0.17579832673072815 - device_num : 0
+2023-09-27 10:28:51,358 | train | INFO | batch: 300/313 loss: 0.058839451521635056 - device_num : 6
+2023-09-27 10:28:51,364 | train | INFO | batch: 300/313 loss: 0.21177996695041656 - device_num : 3
+2023-09-27 10:29:15,627 | train | INFO | --Val 2/10 -- device_num:1
+2023-09-27 10:29:15,665 | train | INFO | --Val 2/10 -- device_num:4
+2023-09-27 10:29:15,666 | train | INFO | --Val 2/10 -- device_num:0
+2023-09-27 10:29:15,660 | train | INFO | --Val 2/10 -- device_num:6
+2023-09-27 10:29:15,674 | train | INFO | --Val 2/10 -- device_num:3
+2023-09-27 10:29:15,774 | train | INFO | --Val 2/10 -- device_num:2
+2023-09-27 10:29:15,782 | train | INFO | --Val 2/10 -- device_num:5
+2023-09-27 10:29:15,931 | train | INFO | --Val 2/10 -- device_num:7
+2023-09-27 10:29:23,030 | train | INFO | batch: 0/16 loss: 0.09536551684141159 - device_num : 6
+2023-09-27 10:29:23,157 | train | INFO | batch: 0/16 loss: 0.7559333443641663 - device_num : 0
+2023-09-27 10:29:24,190 | train | INFO | batch: 0/16 loss: 0.32478299736976624 - device_num : 1
+2023-09-27 10:29:24,570 | train | INFO | batch: 0/16 loss: 0.2154545783996582 - device_num : 4
+2023-09-27 10:29:24,580 | train | INFO | batch: 0/16 loss: 0.737436056137085 - device_num : 3
+2023-09-27 10:29:25,142 | train | INFO | batch: 0/16 loss: 0.580799400806427 - device_num : 2
+2023-09-27 10:29:25,143 | train | INFO | batch: 0/16 loss: 0.5727664828300476 - device_num : 5
+2023-09-27 10:29:25,295 | train | INFO | batch: 0/16 loss: 0.3961436450481415 - device_num : 7
+2023-09-27 10:29:32,149 | train | INFO | --Train 3/10 -- device_num:6
+2023-09-27 10:29:32,183 | train | INFO | Write row 2
+2023-09-27 10:29:32,491 | train | INFO | --Train 3/10 -- device_num:4
+2023-09-27 10:29:32,492 | train | INFO | --Train 3/10 -- device_num:3
+2023-09-27 10:29:32,566 | train | INFO | --Train 3/10 -- device_num:1
+2023-09-27 10:29:33,087 | train | INFO | --Train 3/10 -- device_num:7
+2023-09-27 10:29:33,227 | train | INFO | --Train 3/10 -- device_num:5
+2023-09-27 10:29:33,303 | train | INFO | --Train 3/10 -- device_num:2
+2023-09-27 10:29:40,286 | train | INFO | batch: 0/313 loss: 0.1478382796049118 - device_num : 4
+2023-09-27 10:29:40,635 | train | INFO | batch: 0/313 loss: 0.059130165725946426 - device_num : 1
+2023-09-27 10:29:40,865 | train | INFO | batch: 0/313 loss: 0.060180071741342545 - device_num : 6
+2023-09-27 10:29:41,424 | train | INFO | batch: 0/313 loss: 0.44428443908691406 - device_num : 3
+2023-09-27 10:29:42,586 | train | INFO | batch: 0/313 loss: 0.06336261332035065 - device_num : 2
+2023-09-27 10:29:42,797 | train | INFO | batch: 0/313 loss: 0.2603035271167755 - device_num : 5
+2023-09-27 10:29:42,798 | train | INFO | batch: 0/313 loss: 0.02015232853591442 - device_num : 7
+2023-09-27 10:29:45,250 | train | INFO | --Train 3/10 -- device_num:0
+2023-09-27 10:29:48,437 | train | INFO | batch: 0/313 loss: 0.054746538400650024 - device_num : 0
+2023-09-27 10:32:35,206 | train | INFO | batch: 100/313 loss: 0.009795558638870716 - device_num : 4
+2023-09-27 10:32:35,209 | train | INFO | batch: 100/313 loss: 0.16113078594207764 - device_num : 5
+2023-09-27 10:32:35,222 | train | INFO | batch: 100/313 loss: 0.13086262345314026 - device_num : 7
+2023-09-27 10:32:35,263 | train | INFO | batch: 100/313 loss: 0.04140310361981392 - device_num : 2
+2023-09-27 10:32:35,272 | train | INFO | batch: 100/313 loss: 0.27818483114242554 - device_num : 0
+2023-09-27 10:32:35,280 | train | INFO | batch: 100/313 loss: 0.22473202645778656 - device_num : 6
+2023-09-27 10:32:35,420 | train | INFO | batch: 100/313 loss: 0.23401086032390594 - device_num : 3
+2023-09-27 10:32:35,470 | train | INFO | batch: 100/313 loss: 0.1090584471821785 - device_num : 1
+2023-09-27 10:35:23,112 | train | INFO | batch: 200/313 loss: 0.033693645149469376 - device_num : 4
+2023-09-27 10:35:23,154 | train | INFO | batch: 200/313 loss: 0.16586144268512726 - device_num : 2
+2023-09-27 10:35:23,186 | train | INFO | batch: 200/313 loss: 0.039000459015369415 - device_num : 3
+2023-09-27 10:35:23,190 | train | INFO | batch: 200/313 loss: 0.04147639870643616 - device_num : 0
+2023-09-27 10:35:23,216 | train | INFO | batch: 200/313 loss: 0.01595001108944416 - device_num : 1
+2023-09-27 10:35:23,216 | train | INFO | batch: 200/313 loss: 0.017491605132818222 - device_num : 5
+2023-09-27 10:35:23,244 | train | INFO | batch: 200/313 loss: 0.16482070088386536 - device_num : 6
+2023-09-27 10:35:23,284 | train | INFO | batch: 200/313 loss: 0.033372845500707626 - device_num : 7
+2023-09-27 10:38:08,866 | train | INFO | batch: 300/313 loss: 0.019933968782424927 - device_num : 2
+2023-09-27 10:38:08,866 | train | INFO | batch: 300/313 loss: 0.08526280522346497 - device_num : 3
+2023-09-27 10:38:08,867 | train | INFO | batch: 300/313 loss: 0.3834996521472931 - device_num : 7
+2023-09-27 10:38:08,868 | train | INFO | batch: 300/313 loss: 0.026426564902067184 - device_num : 0
+2023-09-27 10:38:08,872 | train | INFO | batch: 300/313 loss: 0.0027977044228464365 - device_num : 1
+2023-09-27 10:38:08,873 | train | INFO | batch: 300/313 loss: 0.18489712476730347 - device_num : 6
+2023-09-27 10:38:08,879 | train | INFO | batch: 300/313 loss: 0.04177140071988106 - device_num : 4
+2023-09-27 10:38:08,882 | train | INFO | batch: 300/313 loss: 0.05461243912577629 - device_num : 5
+2023-09-27 10:38:24,693 | train | INFO | --Val 3/10 -- device_num:1
+2023-09-27 10:38:24,748 | train | INFO | --Val 3/10 -- device_num:5
+2023-09-27 10:38:24,759 | train | INFO | --Val 3/10 -- device_num:3
+2023-09-27 10:38:24,763 | train | INFO | --Val 3/10 -- device_num:7
+2023-09-27 10:38:24,771 | train | INFO | --Val 3/10 -- device_num:6
+2023-09-27 10:38:24,782 | train | INFO | --Val 3/10 -- device_num:0
+2023-09-27 10:38:24,785 | train | INFO | --Val 3/10 -- device_num:2
+2023-09-27 10:38:24,791 | train | INFO | --Val 3/10 -- device_num:4
+2023-09-27 10:38:29,318 | train | INFO | batch: 0/16 loss: 0.1480429619550705 - device_num : 4
+2023-09-27 10:38:30,038 | train | INFO | batch: 0/16 loss: 0.23539011180400848 - device_num : 1
+2023-09-27 10:38:30,501 | train | INFO | batch: 0/16 loss: 0.39161446690559387 - device_num : 3
+2023-09-27 10:38:30,558 | train | INFO | batch: 0/16 loss: 0.8506348729133606 - device_num : 7
+2023-09-27 10:38:31,381 | train | INFO | batch: 0/16 loss: 0.7794504761695862 - device_num : 2
+2023-09-27 10:38:31,395 | train | INFO | batch: 0/16 loss: 0.38938435912132263 - device_num : 6
+2023-09-27 10:38:31,399 | train | INFO | batch: 0/16 loss: 0.5392781496047974 - device_num : 5
+2023-09-27 10:38:31,523 | train | INFO | batch: 0/16 loss: 0.4455733895301819 - device_num : 0
+2023-09-27 10:38:38,363 | train | INFO | --Train 4/10 -- device_num:1
+2023-09-27 10:38:38,528 | train | INFO | --Train 4/10 -- device_num:4
+2023-09-27 10:38:39,027 | train | INFO | --Train 4/10 -- device_num:7
+2023-09-27 10:38:39,069 | train | INFO | --Train 4/10 -- device_num:3
+2023-09-27 10:38:39,434 | train | INFO | --Train 4/10 -- device_num:2
+2023-09-27 10:38:39,581 | train | INFO | --Train 4/10 -- device_num:5
+2023-09-27 10:38:39,810 | train | INFO | --Train 4/10 -- device_num:6
+2023-09-27 10:38:40,002 | train | INFO | Write row 3
+2023-09-27 10:38:45,416 | train | INFO | batch: 0/313 loss: 0.021954616531729698 - device_num : 4
+2023-09-27 10:38:47,032 | train | INFO | batch: 0/313 loss: 0.026143454015254974 - device_num : 3
+2023-09-27 10:38:47,112 | train | INFO | batch: 0/313 loss: 0.013409707695245743 - device_num : 1
+2023-09-27 10:38:48,066 | train | INFO | batch: 0/313 loss: 0.14700859785079956 - device_num : 7
+2023-09-27 10:38:48,819 | train | INFO | batch: 0/313 loss: 0.08409383147954941 - device_num : 5
+2023-09-27 10:38:48,905 | train | INFO | batch: 0/313 loss: 0.031794797629117966 - device_num : 2
+2023-09-27 10:38:49,154 | train | INFO | batch: 0/313 loss: 0.016064200550317764 - device_num : 6
+2023-09-27 10:38:51,621 | train | INFO | --Train 4/10 -- device_num:0
+2023-09-27 10:38:53,045 | train | INFO | batch: 0/313 loss: 0.015188643708825111 - device_num : 0
+2023-09-27 10:41:42,652 | train | INFO | batch: 100/313 loss: 0.008638869039714336 - device_num : 4
+2023-09-27 10:41:42,708 | train | INFO | batch: 100/313 loss: 0.14606577157974243 - device_num : 0
+2023-09-27 10:41:42,735 | train | INFO | batch: 100/313 loss: 0.018182244151830673 - device_num : 2
+2023-09-27 10:41:42,740 | train | INFO | batch: 100/313 loss: 0.003566278610378504 - device_num : 3
+2023-09-27 10:41:42,772 | train | INFO | batch: 100/313 loss: 0.005573936738073826 - device_num : 5
+2023-09-27 10:41:42,785 | train | INFO | batch: 100/313 loss: 0.1377819925546646 - device_num : 1
+2023-09-27 10:41:42,790 | train | INFO | batch: 100/313 loss: 0.08752600848674774 - device_num : 7
+2023-09-27 10:41:42,988 | train | INFO | batch: 100/313 loss: 0.04415135085582733 - device_num : 6
+2023-09-27 10:44:32,398 | train | INFO | batch: 200/313 loss: 0.002669656416401267 - device_num : 1
+2023-09-27 10:44:32,538 | train | INFO | batch: 200/313 loss: 0.0280048418790102 - device_num : 3
+2023-09-27 10:44:32,620 | train | INFO | batch: 200/313 loss: 0.022126715630292892 - device_num : 2
+2023-09-27 10:44:32,649 | train | INFO | batch: 200/313 loss: 0.2295718789100647 - device_num : 7
+2023-09-27 10:44:32,662 | train | INFO | batch: 200/313 loss: 0.004698719829320908 - device_num : 4
+2023-09-27 10:44:32,747 | train | INFO | batch: 200/313 loss: 0.05478737875819206 - device_num : 5
+2023-09-27 10:44:32,752 | train | INFO | batch: 200/313 loss: 0.09686785191297531 - device_num : 0
+2023-09-27 10:44:32,921 | train | INFO | batch: 200/313 loss: 0.0033792827744036913 - device_num : 6
+2023-09-27 10:47:17,064 | train | INFO | batch: 300/313 loss: 0.011441043578088284 - device_num : 0
+2023-09-27 10:47:17,345 | train | INFO | batch: 300/313 loss: 0.014639127999544144 - device_num : 3
+2023-09-27 10:47:17,414 | train | INFO | batch: 300/313 loss: 0.009050875902175903 - device_num : 7
+2023-09-27 10:47:17,426 | train | INFO | batch: 300/313 loss: 0.0015279367798939347 - device_num : 1
+2023-09-27 10:47:17,433 | train | INFO | batch: 300/313 loss: 0.08404171466827393 - device_num : 4
+2023-09-27 10:47:17,432 | train | INFO | batch: 300/313 loss: 0.03566049784421921 - device_num : 6
+2023-09-27 10:47:17,440 | train | INFO | batch: 300/313 loss: 0.0012852030340582132 - device_num : 2
+2023-09-27 10:47:17,467 | train | INFO | batch: 300/313 loss: 0.007965603843331337 - device_num : 5
+2023-09-27 10:47:32,806 | train | INFO | --Val 4/10 -- device_num:1
+2023-09-27 10:47:32,824 | train | INFO | --Val 4/10 -- device_num:0
+2023-09-27 10:47:32,835 | train | INFO | --Val 4/10 -- device_num:3
+2023-09-27 10:47:32,954 | train | INFO | --Val 4/10 -- device_num:2
+2023-09-27 10:47:32,995 | train | INFO | --Val 4/10 -- device_num:5
+2023-09-27 10:47:33,012 | train | INFO | --Val 4/10 -- device_num:6
+2023-09-27 10:47:33,045 | train | INFO | --Val 4/10 -- device_num:7
+2023-09-27 10:47:33,033 | train | INFO | --Val 4/10 -- device_num:4
+2023-09-27 10:47:37,196 | train | INFO | batch: 0/16 loss: 0.5276210308074951 - device_num : 1
+2023-09-27 10:47:37,591 | train | INFO | batch: 0/16 loss: 0.22751647233963013 - device_num : 2
+2023-09-27 10:47:38,656 | train | INFO | batch: 0/16 loss: 0.5331637859344482 - device_num : 0
+2023-09-27 10:47:39,517 | train | INFO | batch: 0/16 loss: 0.23727566003799438 - device_num : 4
+2023-09-27 10:47:39,863 | train | INFO | batch: 0/16 loss: 0.15057848393917084 - device_num : 3
+2023-09-27 10:47:40,108 | train | INFO | batch: 0/16 loss: 0.8007997870445251 - device_num : 7
+2023-09-27 10:47:40,210 | train | INFO | batch: 0/16 loss: 0.04826512560248375 - device_num : 6
+2023-09-27 10:47:40,273 | train | INFO | batch: 0/16 loss: 0.4021364152431488 - device_num : 5
+2023-09-27 10:47:46,899 | train | INFO | --Train 5/10 -- device_num:1
+2023-09-27 10:47:47,751 | train | INFO | --Train 5/10 -- device_num:2
+2023-09-27 10:47:47,784 | train | INFO | Write row 4
+2023-09-27 10:47:47,950 | train | INFO | --Train 5/10 -- device_num:3
+2023-09-27 10:47:48,091 | train | INFO | --Train 5/10 -- device_num:7
+2023-09-27 10:47:48,218 | train | INFO | --Train 5/10 -- device_num:4
+2023-09-27 10:47:48,297 | train | INFO | --Train 5/10 -- device_num:5
+2023-09-27 10:47:48,920 | train | INFO | --Train 5/10 -- device_num:6
+2023-09-27 10:47:53,445 | train | INFO | batch: 0/313 loss: 0.03165683150291443 - device_num : 1
+2023-09-27 10:47:54,168 | train | INFO | batch: 0/313 loss: 0.16425807774066925 - device_num : 2
+2023-09-27 10:47:54,948 | train | INFO | batch: 0/313 loss: 0.003017592476680875 - device_num : 4
+2023-09-27 10:47:55,655 | train | INFO | batch: 0/313 loss: 0.12302108854055405 - device_num : 3
+2023-09-27 10:47:55,657 | train | INFO | batch: 0/313 loss: 0.012863011099398136 - device_num : 7
+2023-09-27 10:47:56,279 | train | INFO | batch: 0/313 loss: 0.004044542089104652 - device_num : 5
+2023-09-27 10:47:56,345 | train | INFO | batch: 0/313 loss: 0.04232324659824371 - device_num : 6
+2023-09-27 10:47:58,850 | train | INFO | --Train 5/10 -- device_num:0
+2023-09-27 10:48:00,362 | train | INFO | batch: 0/313 loss: 0.10722249001264572 - device_num : 0
+2023-09-27 10:50:56,599 | train | INFO | batch: 100/313 loss: 0.033575404435396194 - device_num : 4
+2023-09-27 10:50:56,623 | train | INFO | batch: 100/313 loss: 0.05156280845403671 - device_num : 2
+2023-09-27 10:50:56,663 | train | INFO | batch: 100/313 loss: 0.006846767384558916 - device_num : 1
+2023-09-27 10:50:56,668 | train | INFO | batch: 100/313 loss: 0.16544516384601593 - device_num : 3
+2023-09-27 10:50:56,698 | train | INFO | batch: 100/313 loss: 0.07754798233509064 - device_num : 6
+2023-09-27 10:50:56,755 | train | INFO | batch: 100/313 loss: 0.010675260797142982 - device_num : 5
+2023-09-27 10:50:56,792 | train | INFO | batch: 100/313 loss: 0.15392917394638062 - device_num : 0
+2023-09-27 10:50:57,058 | train | INFO | batch: 100/313 loss: 0.030005477368831635 - device_num : 7
+2023-09-27 10:53:45,566 | train | INFO | batch: 200/313 loss: 0.031701914966106415 - device_num : 5
+2023-09-27 10:53:45,582 | train | INFO | batch: 200/313 loss: 0.04056849330663681 - device_num : 0
+2023-09-27 10:53:45,624 | train | INFO | batch: 200/313 loss: 0.009048673324286938 - device_num : 1
+2023-09-27 10:53:45,737 | train | INFO | batch: 200/313 loss: 0.03698562830686569 - device_num : 6
+2023-09-27 10:53:45,744 | train | INFO | batch: 200/313 loss: 0.05152677744626999 - device_num : 2
+2023-09-27 10:53:45,911 | train | INFO | batch: 200/313 loss: 0.036531995981931686 - device_num : 4
+2023-09-27 10:53:45,972 | train | INFO | batch: 200/313 loss: 0.014209969900548458 - device_num : 3
+2023-09-27 10:53:46,179 | train | INFO | batch: 200/313 loss: 0.4042264223098755 - device_num : 7
+2023-09-27 10:56:30,425 | train | INFO | batch: 300/313 loss: 0.018577605485916138 - device_num : 2
+2023-09-27 10:56:30,468 | train | INFO | batch: 300/313 loss: 0.025119777768850327 - device_num : 4
+2023-09-27 10:56:30,498 | train | INFO | batch: 300/313 loss: 0.015411807224154472 - device_num : 5
+2023-09-27 10:56:30,522 | train | INFO | batch: 300/313 loss: 0.024291178211569786 - device_num : 7
+2023-09-27 10:56:30,581 | train | INFO | batch: 300/313 loss: 0.06508361548185349 - device_num : 3
+2023-09-27 10:56:30,595 | train | INFO | batch: 300/313 loss: 0.0020550149492919445 - device_num : 1
+2023-09-27 10:56:30,718 | train | INFO | batch: 300/313 loss: 0.06620382517576218 - device_num : 0
+2023-09-27 10:56:31,102 | train | INFO | batch: 300/313 loss: 0.27785027027130127 - device_num : 6
+2023-09-27 10:56:43,317 | train | INFO | --Val 5/10 -- device_num:1
+2023-09-27 10:56:43,389 | train | INFO | --Val 5/10 -- device_num:3
+2023-09-27 10:56:43,399 | train | INFO | --Val 5/10 -- device_num:2
+2023-09-27 10:56:43,422 | train | INFO | --Val 5/10 -- device_num:4
+2023-09-27 10:56:43,423 | train | INFO | --Val 5/10 -- device_num:6
+2023-09-27 10:56:43,444 | train | INFO | --Val 5/10 -- device_num:5
+2023-09-27 10:56:43,458 | train | INFO | --Val 5/10 -- device_num:7
+2023-09-27 10:56:43,459 | train | INFO | --Val 5/10 -- device_num:0
+2023-09-27 10:56:47,878 | train | INFO | batch: 0/16 loss: 0.3882032632827759 - device_num : 1
+2023-09-27 10:56:48,316 | train | INFO | batch: 0/16 loss: 0.26118215918540955 - device_num : 3
+2023-09-27 10:56:48,981 | train | INFO | batch: 0/16 loss: 0.5258682370185852 - device_num : 2
+2023-09-27 10:56:49,082 | train | INFO | batch: 0/16 loss: 0.5919854640960693 - device_num : 0
+2023-09-27 10:56:50,023 | train | INFO | batch: 0/16 loss: 0.20580676198005676 - device_num : 6
+2023-09-27 10:56:50,547 | train | INFO | batch: 0/16 loss: 0.538333535194397 - device_num : 5
+2023-09-27 10:56:50,645 | train | INFO | batch: 0/16 loss: 0.9657012820243835 - device_num : 7
+2023-09-27 10:56:50,737 | train | INFO | batch: 0/16 loss: 0.3909188210964203 - device_num : 4
+2023-09-27 10:56:58,865 | train | INFO | --Train 6/10 -- device_num:1
+2023-09-27 10:56:59,347 | train | INFO | --Train 6/10 -- device_num:2
+2023-09-27 10:56:59,507 | train | INFO | --Train 6/10 -- device_num:5
+2023-09-27 10:56:59,537 | train | INFO | --Train 6/10 -- device_num:3
+2023-09-27 10:56:59,661 | train | INFO | --Train 6/10 -- device_num:6
+2023-09-27 10:56:59,679 | train | INFO | Write row 5
+2023-09-27 10:56:59,891 | train | INFO | --Train 6/10 -- device_num:7
+2023-09-27 10:56:59,964 | train | INFO | --Train 6/10 -- device_num:4
+2023-09-27 10:57:04,521 | train | INFO | batch: 0/313 loss: 0.0064871227368712425 - device_num : 1
+2023-09-27 10:57:05,414 | train | INFO | batch: 0/313 loss: 0.002248962875455618 - device_num : 3
+2023-09-27 10:57:06,518 | train | INFO | batch: 0/313 loss: 0.006174514070153236 - device_num : 2
+2023-09-27 10:57:06,668 | train | INFO | batch: 0/313 loss: 0.01092660240828991 - device_num : 4
+2023-09-27 10:57:06,687 | train | INFO | batch: 0/313 loss: 0.09021732211112976 - device_num : 7
+2023-09-27 10:57:07,005 | train | INFO | batch: 0/313 loss: 0.23055405914783478 - device_num : 5
+2023-09-27 10:57:07,424 | train | INFO | batch: 0/313 loss: 0.015523039735853672 - device_num : 6
+2023-09-27 10:57:09,071 | train | INFO | --Train 6/10 -- device_num:0
+2023-09-27 10:57:11,550 | train | INFO | batch: 0/313 loss: 0.06887552887201309 - device_num : 0
+2023-09-27 11:00:02,031 | train | INFO | batch: 100/313 loss: 0.0010805182391777635 - device_num : 3
+2023-09-27 11:00:02,053 | train | INFO | batch: 100/313 loss: 0.011414768174290657 - device_num : 7
+2023-09-27 11:00:02,066 | train | INFO | batch: 100/313 loss: 0.0005100489943288267 - device_num : 2
+2023-09-27 11:00:02,082 | train | INFO | batch: 100/313 loss: 0.1263507902622223 - device_num : 5
+2023-09-27 11:00:02,118 | train | INFO | batch: 100/313 loss: 0.033792268484830856 - device_num : 0
+2023-09-27 11:00:02,131 | train | INFO | batch: 100/313 loss: 0.010547812096774578 - device_num : 1
+2023-09-27 11:00:02,164 | train | INFO | batch: 100/313 loss: 0.00597566831856966 - device_num : 4
+2023-09-27 11:00:02,262 | train | INFO | batch: 100/313 loss: 0.027633970603346825 - device_num : 6
+2023-09-27 11:02:51,708 | train | INFO | batch: 200/313 loss: 0.019410084933042526 - device_num : 3
+2023-09-27 11:02:51,769 | train | INFO | batch: 200/313 loss: 0.023900093510746956 - device_num : 0
+2023-09-27 11:02:51,861 | train | INFO | batch: 200/313 loss: 0.033413998782634735 - device_num : 2
+2023-09-27 11:02:52,100 | train | INFO | batch: 200/313 loss: 0.008120845071971416 - device_num : 1
+2023-09-27 11:02:52,135 | train | INFO | batch: 200/313 loss: 0.013095696456730366 - device_num : 7
+2023-09-27 11:02:52,344 | train | INFO | batch: 200/313 loss: 0.20017993450164795 - device_num : 4
+2023-09-27 11:02:52,384 | train | INFO | batch: 200/313 loss: 0.07415605336427689 - device_num : 5
+2023-09-27 11:02:52,410 | train | INFO | batch: 200/313 loss: 0.08430676907300949 - device_num : 6
+2023-09-27 11:05:41,382 | train | INFO | batch: 300/313 loss: 0.0014695330755785108 - device_num : 0
+2023-09-27 11:05:41,425 | train | INFO | batch: 300/313 loss: 0.48816829919815063 - device_num : 2
+2023-09-27 11:05:41,437 | train | INFO | batch: 300/313 loss: 0.020010201260447502 - device_num : 3
+2023-09-27 11:05:41,518 | train | INFO | batch: 300/313 loss: 0.00911668874323368 - device_num : 7
+2023-09-27 11:05:41,546 | train | INFO | batch: 300/313 loss: 0.00642017088830471 - device_num : 6
+2023-09-27 11:05:41,549 | train | INFO | batch: 300/313 loss: 0.0867372527718544 - device_num : 4
+2023-09-27 11:05:41,557 | train | INFO | batch: 300/313 loss: 0.05603370815515518 - device_num : 5
+2023-09-27 11:05:41,558 | train | INFO | batch: 300/313 loss: 0.0016855953726917505 - device_num : 1
+2023-09-27 11:05:53,861 | train | INFO | --Val 6/10 -- device_num:3
+2023-09-27 11:05:53,888 | train | INFO | --Val 6/10 -- device_num:4
+2023-09-27 11:05:53,894 | train | INFO | --Val 6/10 -- device_num:2
+2023-09-27 11:05:53,906 | train | INFO | --Val 6/10 -- device_num:7
+2023-09-27 11:05:53,911 | train | INFO | --Val 6/10 -- device_num:1
+2023-09-27 11:05:53,943 | train | INFO | --Val 6/10 -- device_num:6
+2023-09-27 11:05:53,978 | train | INFO | --Val 6/10 -- device_num:5
+2023-09-27 11:05:54,020 | train | INFO | --Val 6/10 -- device_num:0
+2023-09-27 11:06:00,106 | train | INFO | batch: 0/16 loss: 0.18132321536540985 - device_num : 4
+2023-09-27 11:06:01,414 | train | INFO | batch: 0/16 loss: 0.4681479334831238 - device_num : 3
+2023-09-27 11:06:01,541 | train | INFO | batch: 0/16 loss: 0.49187377095222473 - device_num : 1
+2023-09-27 11:06:01,545 | train | INFO | batch: 0/16 loss: 1.261812686920166 - device_num : 7
+2023-09-27 11:06:02,283 | train | INFO | batch: 0/16 loss: 0.14492188394069672 - device_num : 2
+2023-09-27 11:06:02,324 | train | INFO | batch: 0/16 loss: 0.4185142517089844 - device_num : 6
+2023-09-27 11:06:02,417 | train | INFO | batch: 0/16 loss: 0.5969386696815491 - device_num : 0
+2023-09-27 11:06:02,487 | train | INFO | batch: 0/16 loss: 0.6439971327781677 - device_num : 5
+2023-09-27 11:06:09,609 | train | INFO | --Train 7/10 -- device_num:4
+2023-09-27 11:06:09,948 | train | INFO | --Train 7/10 -- device_num:3
+2023-09-27 11:06:10,041 | train | INFO | --Train 7/10 -- device_num:7
+2023-09-27 11:06:10,196 | train | INFO | --Train 7/10 -- device_num:1
+2023-09-27 11:06:10,454 | train | INFO | --Train 7/10 -- device_num:2
+2023-09-27 11:06:10,567 | train | INFO | --Train 7/10 -- device_num:6
+2023-09-27 11:06:10,584 | train | INFO | --Train 7/10 -- device_num:5
+2023-09-27 11:06:10,591 | train | INFO | Write row 6
+2023-09-27 11:06:15,372 | train | INFO | batch: 0/313 loss: 0.05858534947037697 - device_num : 4
+2023-09-27 11:06:15,955 | train | INFO | batch: 0/313 loss: 0.0706600695848465 - device_num : 3
+2023-09-27 11:06:17,483 | train | INFO | batch: 0/313 loss: 0.00849397387355566 - device_num : 7
+2023-09-27 11:06:17,611 | train | INFO | batch: 0/313 loss: 0.17180363833904266 - device_num : 1
+2023-09-27 11:06:18,359 | train | INFO | batch: 0/313 loss: 0.010103696025907993 - device_num : 2
+2023-09-27 11:06:18,567 | train | INFO | batch: 0/313 loss: 0.015362484380602837 - device_num : 6
+2023-09-27 11:06:18,722 | train | INFO | batch: 0/313 loss: 0.017032993957400322 - device_num : 5
+2023-09-27 11:06:22,456 | train | INFO | --Train 7/10 -- device_num:0
+2023-09-27 11:06:24,337 | train | INFO | batch: 0/313 loss: 0.06335017085075378 - device_num : 0
+2023-09-27 11:09:10,854 | train | INFO | batch: 100/313 loss: 0.07704885303974152 - device_num : 7
+2023-09-27 11:09:11,093 | train | INFO | batch: 100/313 loss: 0.030800998210906982 - device_num : 3
+2023-09-27 11:09:11,109 | train | INFO | batch: 100/313 loss: 0.006987420842051506 - device_num : 5
+2023-09-27 11:09:11,153 | train | INFO | batch: 100/313 loss: 0.01975036971271038 - device_num : 4
+2023-09-27 11:09:11,164 | train | INFO | batch: 100/313 loss: 0.0015187128446996212 - device_num : 0
+2023-09-27 11:09:11,190 | train | INFO | batch: 100/313 loss: 0.016818907111883163 - device_num : 2
+2023-09-27 11:09:11,270 | train | INFO | batch: 100/313 loss: 0.0032009491696953773 - device_num : 1
+2023-09-27 11:09:11,518 | train | INFO | batch: 100/313 loss: 0.0034170690923929214 - device_num : 6
+2023-09-27 11:11:57,626 | train | INFO | batch: 200/313 loss: 0.024212203919887543 - device_num : 7
+2023-09-27 11:11:57,680 | train | INFO | batch: 200/313 loss: 0.1153339147567749 - device_num : 4
+2023-09-27 11:11:57,762 | train | INFO | batch: 200/313 loss: 0.08267876505851746 - device_num : 6
+2023-09-27 11:11:57,841 | train | INFO | batch: 200/313 loss: 0.0034378832206130028 - device_num : 2
+2023-09-27 11:11:58,070 | train | INFO | batch: 200/313 loss: 0.001338915666565299 - device_num : 0
+2023-09-27 11:11:58,129 | train | INFO | batch: 200/313 loss: 0.0020220051519572735 - device_num : 1
+2023-09-27 11:11:58,176 | train | INFO | batch: 200/313 loss: 0.015006809495389462 - device_num : 3
+2023-09-27 11:11:58,235 | train | INFO | batch: 200/313 loss: 0.001150560681708157 - device_num : 5
+2023-09-27 11:14:44,916 | train | INFO | batch: 300/313 loss: 0.0301939956843853 - device_num : 3
+2023-09-27 11:14:45,018 | train | INFO | batch: 300/313 loss: 0.005016442853957415 - device_num : 2
+2023-09-27 11:14:45,103 | train | INFO | batch: 300/313 loss: 0.0011257481528446078 - device_num : 1
+2023-09-27 11:14:45,163 | train | INFO | batch: 300/313 loss: 0.01209996733814478 - device_num : 6
+2023-09-27 11:14:45,194 | train | INFO | batch: 300/313 loss: 0.025551490485668182 - device_num : 7
+2023-09-27 11:14:45,207 | train | INFO | batch: 300/313 loss: 0.011467723175883293 - device_num : 5
+2023-09-27 11:14:45,225 | train | INFO | batch: 300/313 loss: 0.000875111494679004 - device_num : 4
+2023-09-27 11:14:45,252 | train | INFO | batch: 300/313 loss: 0.011193530634045601 - device_num : 0
+2023-09-27 11:14:57,606 | train | INFO | --Val 7/10 -- device_num:1
+2023-09-27 11:14:57,712 | train | INFO | --Val 7/10 -- device_num:6
+2023-09-27 11:14:57,697 | train | INFO | --Val 7/10 -- device_num:2
+2023-09-27 11:14:57,717 | train | INFO | --Val 7/10 -- device_num:7
+2023-09-27 11:14:57,723 | train | INFO | --Val 7/10 -- device_num:5
+2023-09-27 11:14:57,736 | train | INFO | --Val 7/10 -- device_num:0
+2023-09-27 11:14:57,746 | train | INFO | --Val 7/10 -- device_num:4
+2023-09-27 11:14:57,748 | train | INFO | --Val 7/10 -- device_num:3
+2023-09-27 11:15:03,072 | train | INFO | batch: 0/16 loss: 0.34805405139923096 - device_num : 7
+2023-09-27 11:15:03,580 | train | INFO | batch: 0/16 loss: 1.0280652046203613 - device_num : 0
+2023-09-27 11:15:03,854 | train | INFO | batch: 0/16 loss: 0.2064264714717865 - device_num : 4
+2023-09-27 11:15:04,893 | train | INFO | batch: 0/16 loss: 0.4631255567073822 - device_num : 1
+2023-09-27 11:15:05,422 | train | INFO | batch: 0/16 loss: 0.6250515580177307 - device_num : 3
+2023-09-27 11:15:05,779 | train | INFO | batch: 0/16 loss: 0.2198958545923233 - device_num : 6
+2023-09-27 11:15:05,866 | train | INFO | batch: 0/16 loss: 0.4488164782524109 - device_num : 2
+2023-09-27 11:15:05,889 | train | INFO | batch: 0/16 loss: 0.22155649960041046 - device_num : 5
+2023-09-27 11:15:12,885 | train | INFO | --Train 8/10 -- device_num:4
+2023-09-27 11:15:13,195 | train | INFO | --Train 8/10 -- device_num:7
+2023-09-27 11:15:13,277 | train | INFO | Write row 7
+2023-09-27 11:15:13,499 | train | INFO | --Train 8/10 -- device_num:6
+2023-09-27 11:15:13,557 | train | INFO | --Train 8/10 -- device_num:1
+2023-09-27 11:15:13,801 | train | INFO | --Train 8/10 -- device_num:3
+2023-09-27 11:15:13,874 | train | INFO | --Train 8/10 -- device_num:5
+2023-09-27 11:15:13,897 | train | INFO | --Train 8/10 -- device_num:2
+2023-09-27 11:15:18,567 | train | INFO | batch: 0/313 loss: 0.043399397283792496 - device_num : 4
+2023-09-27 11:15:19,714 | train | INFO | batch: 0/313 loss: 0.001080904039554298 - device_num : 7
+2023-09-27 11:15:21,573 | train | INFO | batch: 0/313 loss: 0.022417552769184113 - device_num : 5
+2023-09-27 11:15:22,023 | train | INFO | batch: 0/313 loss: 0.009659419767558575 - device_num : 1
+2023-09-27 11:15:22,140 | train | INFO | batch: 0/313 loss: 0.03217436745762825 - device_num : 3
+2023-09-27 11:15:22,339 | train | INFO | batch: 0/313 loss: 0.02687220647931099 - device_num : 2
+2023-09-27 11:15:22,347 | train | INFO | batch: 0/313 loss: 0.12046153098344803 - device_num : 6
+2023-09-27 11:15:25,941 | train | INFO | --Train 8/10 -- device_num:0
+2023-09-27 11:15:27,941 | train | INFO | batch: 0/313 loss: 0.019338222220540047 - device_num : 0
+2023-09-27 11:18:11,943 | train | INFO | batch: 100/313 loss: 0.002322243293747306 - device_num : 2
+2023-09-27 11:18:12,017 | train | INFO | batch: 100/313 loss: 0.00815365556627512 - device_num : 5
+2023-09-27 11:18:12,150 | train | INFO | batch: 100/313 loss: 0.02016783133149147 - device_num : 3
+2023-09-27 11:18:12,222 | train | INFO | batch: 100/313 loss: 0.001972006168216467 - device_num : 6
+2023-09-27 11:18:12,311 | train | INFO | batch: 100/313 loss: 0.0033392016775906086 - device_num : 4
+2023-09-27 11:18:12,388 | train | INFO | batch: 100/313 loss: 0.0004866032104473561 - device_num : 7
+2023-09-27 11:18:12,477 | train | INFO | batch: 100/313 loss: 0.013277977705001831 - device_num : 1
+2023-09-27 11:18:12,568 | train | INFO | batch: 100/313 loss: 0.02271246537566185 - device_num : 0
+2023-09-27 11:21:00,233 | train | INFO | batch: 200/313 loss: 0.1988593488931656 - device_num : 7
+2023-09-27 11:21:00,292 | train | INFO | batch: 200/313 loss: 0.029923373833298683 - device_num : 6
+2023-09-27 11:21:00,311 | train | INFO | batch: 200/313 loss: 0.0017936925869435072 - device_num : 0
+2023-09-27 11:21:00,330 | train | INFO | batch: 200/313 loss: 0.055552635341882706 - device_num : 3
+2023-09-27 11:21:00,333 | train | INFO | batch: 200/313 loss: 0.0007987476419657469 - device_num : 5
+2023-09-27 11:21:00,394 | train | INFO | batch: 200/313 loss: 0.0036289088893681765 - device_num : 1
+2023-09-27 11:21:00,406 | train | INFO | batch: 200/313 loss: 0.010584628209471703 - device_num : 2
+2023-09-27 11:21:00,654 | train | INFO | batch: 200/313 loss: 0.03167913109064102 - device_num : 4
+2023-09-27 11:23:43,220 | train | INFO | batch: 300/313 loss: 0.0004444363294169307 - device_num : 1
+2023-09-27 11:23:43,225 | train | INFO | batch: 300/313 loss: 0.0016517720650881529 - device_num : 3
+2023-09-27 11:23:43,229 | train | INFO | batch: 300/313 loss: 0.0002889409370254725 - device_num : 4
+2023-09-27 11:23:43,231 | train | INFO | batch: 300/313 loss: 0.2378092259168625 - device_num : 0
+2023-09-27 11:23:43,231 | train | INFO | batch: 300/313 loss: 0.043779004365205765 - device_num : 5
+2023-09-27 11:23:43,236 | train | INFO | batch: 300/313 loss: 0.08519700169563293 - device_num : 7
+2023-09-27 11:23:43,242 | train | INFO | batch: 300/313 loss: 0.01895887590944767 - device_num : 2
+2023-09-27 11:23:43,346 | train | INFO | batch: 300/313 loss: 0.0005220107268542051 - device_num : 6
+2023-09-27 11:23:55,552 | train | INFO | --Val 8/10 -- device_num:3
+2023-09-27 11:23:55,596 | train | INFO | --Val 8/10 -- device_num:7
+2023-09-27 11:23:55,611 | train | INFO | --Val 8/10 -- device_num:6
+2023-09-27 11:23:55,715 | train | INFO | --Val 8/10 -- device_num:4
+2023-09-27 11:23:55,736 | train | INFO | --Val 8/10 -- device_num:5
+2023-09-27 11:23:55,747 | train | INFO | --Val 8/10 -- device_num:2
+2023-09-27 11:23:55,773 | train | INFO | --Val 8/10 -- device_num:0
+2023-09-27 11:23:55,813 | train | INFO | --Val 8/10 -- device_num:1
+2023-09-27 11:24:01,220 | train | INFO | batch: 0/16 loss: 0.302912175655365 - device_num : 3
+2023-09-27 11:24:02,127 | train | INFO | batch: 0/16 loss: 0.5556645393371582 - device_num : 7
+2023-09-27 11:24:02,413 | train | INFO | batch: 0/16 loss: 0.19216637313365936 - device_num : 4
+2023-09-27 11:24:03,276 | train | INFO | batch: 0/16 loss: 0.39033302664756775 - device_num : 6
+2023-09-27 11:24:03,428 | train | INFO | batch: 0/16 loss: 0.21690881252288818 - device_num : 1
+2023-09-27 11:24:03,654 | train | INFO | batch: 0/16 loss: 0.4332854747772217 - device_num : 0
+2023-09-27 11:24:03,828 | train | INFO | batch: 0/16 loss: 0.7249708771705627 - device_num : 5
+2023-09-27 11:24:04,058 | train | INFO | batch: 0/16 loss: 0.541823148727417 - device_num : 2
+2023-09-27 11:24:11,862 | train | INFO | --Train 9/10 -- device_num:3
+2023-09-27 11:24:11,864 | train | INFO | --Train 9/10 -- device_num:7
+2023-09-27 11:24:12,042 | train | INFO | --Train 9/10 -- device_num:4
+2023-09-27 11:24:12,465 | train | INFO | --Train 9/10 -- device_num:1
+2023-09-27 11:24:12,471 | train | INFO | --Train 9/10 -- device_num:6
+2023-09-27 11:24:12,536 | train | INFO | Write row 8
+2023-09-27 11:24:12,716 | train | INFO | --Train 9/10 -- device_num:5
+2023-09-27 11:24:12,730 | train | INFO | --Train 9/10 -- device_num:2
+2023-09-27 11:24:18,026 | train | INFO | batch: 0/313 loss: 0.18158552050590515 - device_num : 1
+2023-09-27 11:24:18,116 | train | INFO | batch: 0/313 loss: 0.009706997312605381 - device_num : 4
+2023-09-27 11:24:18,237 | train | INFO | batch: 0/313 loss: 0.0006983850616961718 - device_num : 3
+2023-09-27 11:24:19,036 | train | INFO | batch: 0/313 loss: 0.027591463178396225 - device_num : 7
+2023-09-27 11:24:19,321 | train | INFO | batch: 0/313 loss: 0.003504263237118721 - device_num : 2
+2023-09-27 11:24:19,408 | train | INFO | batch: 0/313 loss: 0.01615404523909092 - device_num : 6
+2023-09-27 11:24:19,766 | train | INFO | batch: 0/313 loss: 0.008819598704576492 - device_num : 5
+2023-09-27 11:24:23,113 | train | INFO | --Train 9/10 -- device_num:0
+2023-09-27 11:24:24,901 | train | INFO | batch: 0/313 loss: 0.011913694441318512 - device_num : 0
+2023-09-27 11:27:11,631 | train | INFO | batch: 100/313 loss: 0.0012883504386991262 - device_num : 3
+2023-09-27 11:27:11,633 | train | INFO | batch: 100/313 loss: 0.0017597642727196217 - device_num : 0
+2023-09-27 11:27:11,645 | train | INFO | batch: 100/313 loss: 0.009585353545844555 - device_num : 7
+2023-09-27 11:27:11,664 | train | INFO | batch: 100/313 loss: 0.001849411753937602 - device_num : 4
+2023-09-27 11:27:11,673 | train | INFO | batch: 100/313 loss: 0.004657616838812828 - device_num : 5
+2023-09-27 11:27:11,829 | train | INFO | batch: 100/313 loss: 0.002029333496466279 - device_num : 1
+2023-09-27 11:27:11,955 | train | INFO | batch: 100/313 loss: 0.00040456594433635473 - device_num : 2
+2023-09-27 11:27:12,112 | train | INFO | batch: 100/313 loss: 0.0004975050105713308 - device_num : 6
+2023-09-27 11:29:57,638 | train | INFO | batch: 200/313 loss: 0.00567465228959918 - device_num : 2
+2023-09-27 11:29:57,689 | train | INFO | batch: 200/313 loss: 0.005133653059601784 - device_num : 1
+2023-09-27 11:29:57,724 | train | INFO | batch: 200/313 loss: 0.01603716053068638 - device_num : 0
+2023-09-27 11:29:57,756 | train | INFO | batch: 200/313 loss: 0.021598288789391518 - device_num : 4
+2023-09-27 11:29:57,819 | train | INFO | batch: 200/313 loss: 0.028062118217349052 - device_num : 5
+2023-09-27 11:29:57,893 | train | INFO | batch: 200/313 loss: 0.056748971343040466 - device_num : 7
+2023-09-27 11:29:57,959 | train | INFO | batch: 200/313 loss: 0.0374595932662487 - device_num : 6
+2023-09-27 11:29:57,970 | train | INFO | batch: 200/313 loss: 0.004426713567227125 - device_num : 3
+2023-09-27 11:32:43,068 | train | INFO | batch: 300/313 loss: 0.004491239320486784 - device_num : 4
+2023-09-27 11:32:43,068 | train | INFO | batch: 300/313 loss: 0.47564899921417236 - device_num : 0
+2023-09-27 11:32:43,103 | train | INFO | batch: 300/313 loss: 0.0005953680956736207 - device_num : 2
+2023-09-27 11:32:43,109 | train | INFO | batch: 300/313 loss: 0.024433813989162445 - device_num : 5
+2023-09-27 11:32:43,111 | train | INFO | batch: 300/313 loss: 0.04361607879400253 - device_num : 3
+2023-09-27 11:32:43,149 | train | INFO | batch: 300/313 loss: 0.012827569618821144 - device_num : 6
+2023-09-27 11:32:43,206 | train | INFO | batch: 300/313 loss: 0.002479707123711705 - device_num : 7
+2023-09-27 11:32:43,385 | train | INFO | batch: 300/313 loss: 0.0035415077582001686 - device_num : 1
+2023-09-27 11:32:56,018 | train | INFO | --Val 9/10 -- device_num:5
+2023-09-27 11:32:56,038 | train | INFO | --Val 9/10 -- device_num:7
+2023-09-27 11:32:56,094 | train | INFO | --Val 9/10 -- device_num:0
+2023-09-27 11:32:56,198 | train | INFO | --Val 9/10 -- device_num:1
+2023-09-27 11:32:56,263 | train | INFO | --Val 9/10 -- device_num:2
+2023-09-27 11:32:56,277 | train | INFO | --Val 9/10 -- device_num:6
+2023-09-27 11:32:56,291 | train | INFO | --Val 9/10 -- device_num:3
+2023-09-27 11:32:56,303 | train | INFO | --Val 9/10 -- device_num:4
+2023-09-27 11:33:00,891 | train | INFO | batch: 0/16 loss: 0.6276402473449707 - device_num : 3
+2023-09-27 11:33:01,577 | train | INFO | batch: 0/16 loss: 0.4022686779499054 - device_num : 7
+2023-09-27 11:33:01,693 | train | INFO | batch: 0/16 loss: 0.900827944278717 - device_num : 5
+2023-09-27 11:33:03,129 | train | INFO | batch: 0/16 loss: 0.22582820057868958 - device_num : 1
+2023-09-27 11:33:03,204 | train | INFO | batch: 0/16 loss: 1.0520052909851074 - device_num : 0
+2023-09-27 11:33:03,207 | train | INFO | batch: 0/16 loss: 0.6186252236366272 - device_num : 6
+2023-09-27 11:33:03,209 | train | INFO | batch: 0/16 loss: 0.1084732860326767 - device_num : 2
+2023-09-27 11:33:03,332 | train | INFO | batch: 0/16 loss: 0.6885694861412048 - device_num : 4
+2023-09-27 11:33:12,189 | train | INFO | Write row 9
+2023-09-27 11:33:14,946 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,946 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,947 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,949 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,950 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,950 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,949 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
+2023-09-27 11:33:14,998 | train | INFO | Recorder, epoch 9 Model saved: /content/results/train/20230927_190044/model.pt
