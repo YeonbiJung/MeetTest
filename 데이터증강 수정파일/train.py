@@ -3,7 +3,7 @@ from modules.utils import load_yaml, save_yaml, get_logger
 from modules.earlystoppers import EarlyStopper
 from modules.recorders import Recorder
 from modules.datasets import CowDataset
-from modules.datasets import HFlipedDataset,VFlipedDataset,RotatedDataset,BlurredDataset,CCroppedDataset,RCroppedDataset
+from modules.datasets import HFlipedDataset,VFlipedDataset,RotatedDataset,BlurredDataset,CCroppedDataset,RCroppedDataset,AffinedDataset,PerspectiveDataset
 #from modules.preprocessor import get_preprocessor
 from modules.trainer import Trainer
 from modules.optimizers import get_optimizer
@@ -83,10 +83,18 @@ if __name__ == '__main__':
                               )   
     rc_dataset = RCroppedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
                               dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
-                              )                     
-# 두 데이터셋을 합치기
-    train_dataset = ConcatDataset([rawdataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset])
-
+                              )           
+    rc_dataset2 = RCroppedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
+                              ) 
+    af_dataset = AffinedDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
+                              )
+    ps_dataset = PerspectiveDataset(img_folder = os.path.join(DATA_DIR, 'train', 'images'),
+                              dfpath = os.path.join(DATA_DIR, 'train', 'grade_labels.csv')
+                              )
+# 데이터셋을 합치기
+    train_dataset = ConcatDataset([rawdataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset,rc_dataset2,af_dataset,ps_dataset])
     val_dataset = CowDataset(img_folder = os.path.join(DATA_DIR, 'val', 'images'),
                              dfpath = os.path.join(DATA_DIR, 'val', 'grade_labels.csv'))
     
