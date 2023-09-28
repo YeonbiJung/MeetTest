@@ -105,7 +105,11 @@ tpu 사용해서 실험해 보기
 
 	같은 세팅에서 gpu에 비해 성능이 떨어진다. lr을 조절해 봐야할 것 같다.
 ====================================================================
- 
+train+valid (validation데이터 사용하지 않고 train이랑 합치기)
+
+13)
+	ConvNext_v2_nano_epoch10_lr9.0e-5_batch16_4way_augmentation
+	결과 -> public score 0.9126 private score 0.9224 final score 0.9195
  
 
 모두 github page에 training history 자료들이 존재하니, ppt 만들 때 참고 가능.
