@@ -1,0 +1,304 @@
+from torch.utils.data import Dataset
+from modules.utils import load_json
+import numpy as np
+from PIL import Image
+import os
+import pandas as pd
+import torchvision.transforms as transforms
+import torchvision
+torchvision.disable_beta_transforms_warning()
+import torchvision.transforms.v2 as v2
+class CowDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+class HFlipedDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.RandomHorizontalFlip(),  # Random horizontal flip
+
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class VFlipedDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.RandomVerticalFlip(p=0.7),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class RotatedDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.RandomRotation(30),  # Random rotation up to 10 degrees
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class BlurredDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.GaussianBlur(kernel_size=(3, 3), sigma=(0.1, 5)),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class CCroppedDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.Resize((224, 224)),  # 이미지 크기를 224x224로 조정합니다.
+            transforms.CenterCrop(224),
+            transforms.Resize((248, 200)),  # 이미지 크기를 224x224로 조정합니다.
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+      
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class RCroppedDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.RandomResizedCrop((248, 200), 
+                              scale=(0.8, 1.0), ratio=(0.9, 1.1)),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+      
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class AffinedDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.RandomAffine(180, shear=20),
+            transforms.Resize((248, 200)),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+      
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+        
+class PerspectiveDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        bg_color = (30,150,45)
+        self.df = pd.read_csv(dfpath, usecols=['imname', 'grade'], dtype={'grade': str})
+        self.label_encoding = {'1++': 0, '1+': 1, '1': 2, '2': 3, '3': 4}
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.RandomPerspective(),
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        ])
+    
+        
+        self.image_names = self.df['imname']
+        self.labels = self.df['grade']
+      
+        
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        
+        img = self.transforms(img)
+        
+        target = self.labels[index]
+        lbl = self.label_encoding[target]
+        
+        return img, lbl
+
+class TestDataset(Dataset):
+    def __init__(self, img_folder, dfpath):
+        self.df = pd.read_csv(dfpath, usecols=['imname'],dtype={'imname':str})
+        self.img_folder = img_folder
+        self.transforms = transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456,0.406],[0.229,0.224,0.225])
+        ])
+        self.image_names = self.df['imname']
+    
+    def __len__(self):
+        return len(self.image_names)
+    
+    def __getitem__(self, index):
+        impath = os.path.join(self.img_folder, self.image_names[index])
+        img = Image.open(impath)
+        img = self.transforms(img)
+        filename = self.image_names[index]
+        
+        return img,filename
+    
+if __name__ == '__main__':
+    pass
+
+        
