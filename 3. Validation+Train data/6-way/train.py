@@ -116,7 +116,7 @@ if __name__ == '__main__':
 
     
 # 두 데이터셋을 합치기
-    train_dataset = ConcatDataset([original_dataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset
+    train_dataset = ConcatDataset([original_dataset,hf_dataset,vf_dataset,rt_dataset,bl_dataset,cc_dataset,rc_dataset,
                                    val_dataset, vhf_dataset, vvf_dataset, vrt_dataset, vbl_dataset,vcc_dataset,vrc_dataset])
     
     # DataLoader
