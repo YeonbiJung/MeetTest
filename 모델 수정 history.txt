@@ -118,6 +118,18 @@ train+valid (validation데이터 사용하지 않고 train이랑 합치기)
 14)
 	ConvNext_v2_nano_epoch20_lr9.0e-5_batch16_9way_augmentation_train+valid
 	결과 -> public score 0.9458, private score 0.9428 final score 0.9437
+
+14.5)
+	ConvNext_v2_atto_epoch20_lr9.0e-5_batch256_9way_augmentation_train+valid
+	결과 -> public score 0.9354 private score 0.9359 final score 0.9358 
+	
+15)
+ 	ConvNext_v2_nano_epoch20_lr9.0e-5_batch128_9way_augmentation_train+valid
+ 	결과 -> public score 0.
+ 	
+15.5)
+	ConvNext_v2_base_epoch17_lr9.0e-5_batch24_9way_augmentation_train+valid
+   결과 -> public score 0.9419, private score 0.9384, final score 0.9395
  
 
 모두 github page에 training history 자료들이 존재하니, ppt 만들 때 참고 가능.
