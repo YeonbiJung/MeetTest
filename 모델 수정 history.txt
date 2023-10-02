@@ -125,7 +125,7 @@ train+valid (validation데이터 사용하지 않고 train이랑 합치기)
 	
 15)
  	ConvNext_v2_nano_epoch20_lr9.0e-5_batch128_9way_augmentation_train+valid
- 	결과 -> public score 0.
+ 	결과 -> public score 0.9418 private score 0.9466 final score 0.9452
  	
 15.5)
 	ConvNext_v2_base_epoch17_lr9.0e-5_batch24_9way_augmentation_train+valid
